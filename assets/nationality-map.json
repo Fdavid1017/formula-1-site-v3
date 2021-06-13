@@ -1,0 +1,1894 @@
+{
+  "Afghan": {
+    "country": "Afghanistan",
+    "code": "af"
+  },
+  "Alabamian": {
+    "country": "Alabama",
+    "code": "us-al"
+  },
+  "Åland Island": {
+    "country": "Åland Islands",
+    "code": "ax"
+  },
+  "Alaskan": {
+    "country": "Alaska",
+    "code": "us-ak"
+  },
+  "Albanian": {
+    "country": "Albania",
+    "code": "al"
+  },
+  "Algerian": {
+    "country": "Algeria",
+    "code": "dz"
+  },
+  "American": {
+    "country": "United States",
+    "code": "us"
+  },
+  "American Samoan": {
+    "country": "American Samoa",
+    "code": "as"
+  },
+  "Andorran": {
+    "country": "Andorra",
+    "code": "ad"
+  },
+  "Andorrano": {
+    "country": "Andorra",
+    "code": "ad"
+  },
+  "Angolan": {
+    "country": "Angola",
+    "code": "ao"
+  },
+  "Anguillan": {
+    "country": "Anguilla",
+    "code": "ai"
+  },
+  "Antarctic": {
+    "country": "Antarctica",
+    "code": "aq"
+  },
+  "Antarctican": {
+    "country": "Antarctica",
+    "code": "aq"
+  },
+  "Argentine": {
+    "country": "Argentina",
+    "code": "ar"
+  },
+  "Argentinean": {
+    "country": "Argentina",
+    "code": "ar"
+  },
+  "Argentinian": {
+    "country": "Argentina",
+    "code": "ar"
+  },
+  "Argentino": {
+    "country": "Argentina",
+    "code": "ar"
+  },
+  "Arizonian": {
+    "country": "Arizona",
+    "code": "us-az"
+  },
+  "Arkansawyer": {
+    "country": "Arkansas",
+    "code": "us-ar"
+  },
+  "Arkie": {
+    "country": "Arkansas",
+    "code": "us-ar"
+  },
+  "Armenian": {
+    "country": "Armenia",
+    "code": "am"
+  },
+  "Aruban": {
+    "country": "Aruba",
+    "code": "aw"
+  },
+  "Aussie": {
+    "country": "Australia",
+    "code": "au"
+  },
+  "Australian": {
+    "country": "Australia",
+    "code": "au"
+  },
+  "Australianb": {
+    "country": "Australia",
+    "code": "au"
+  },
+  "Australien": {
+    "country": "Australia",
+    "code": "au"
+  },
+  "Austrian": {
+    "country": "Austria",
+    "code": "at"
+  },
+  "Azerbaijani": {
+    "country": "Azerbaijan",
+    "code": "az"
+  },
+  "Azeri": {
+    "country": "Azerbaijan",
+    "code": "az"
+  },
+  "Azeri'S": {
+    "country": "Azerbaijan",
+    "code": "az"
+  },
+  "Badger": {
+    "country": "Wisconsin",
+    "code": "us-wi"
+  },
+  "Bahraini": {
+    "country": "Bahrain",
+    "code": "bh"
+  },
+  "Bajan": {
+    "country": "Barbados",
+    "code": "bb"
+  },
+  "Bajun": {
+    "country": "Barbados",
+    "code": "bb"
+  },
+  "Bajuns": {
+    "country": "Barbados",
+    "code": "bb"
+  },
+  "Bangladeshi": {
+    "country": "Bangladesh",
+    "code": "bd"
+  },
+  "Barbadian": {
+    "country": "Barbados",
+    "code": "bb"
+  },
+  "Barthélemois": {
+    "country": "Saint Barthélemy",
+    "code": "bl"
+  },
+  "Basotho": {
+    "country": "Lesotho",
+    "code": "ls"
+  },
+  "Batswana": {
+    "country": "Botswana",
+    "code": "bw"
+  },
+  "Bay Stater": {
+    "country": "Massachusetts",
+    "code": "us-ma"
+  },
+  "Belarusian": {
+    "country": "Belarus",
+    "code": "by"
+  },
+  "Belgian": {
+    "country": "Belgium",
+    "code": "be"
+  },
+  "Belizean": {
+    "country": "Belize",
+    "code": "bz"
+  },
+  "Beninois": {
+    "country": "Benin",
+    "code": "bj"
+  },
+  "Bermudan": {
+    "country": "Bermuda",
+    "code": "bm"
+  },
+  "Bermudian": {
+    "country": "Bermuda",
+    "code": "bm"
+  },
+  "Bhutanese": {
+    "country": "Bhutan",
+    "code": "bt"
+  },
+  "Big Bender": {
+    "country": "Tennessee",
+    "code": "us-tn"
+  },
+  "Biot": {
+    "country": "British Indian Ocean Territory",
+    "code": "io"
+  },
+  "Bissau-Guinean": {
+    "country": "Guinea-Bissau",
+    "code": "gw"
+  },
+  "Blue Hen'S Chicken": {
+    "country": "Delaware",
+    "code": "us-de"
+  },
+  "Bolivian": {
+    "country": "Bolivia",
+    "code": "bo"
+  },
+  "Boricua": {
+    "country": "Puerto Rico",
+    "code": "pr"
+  },
+  "Botswanan": {
+    "country": "Botswana",
+    "code": "bw"
+  },
+  "Bouvet Island": {
+    "country": "Bouvet Island",
+    "code": "bv"
+  },
+  "Brasileiro": {
+    "country": "Brazil",
+    "code": "br"
+  },
+  "Brazilian": {
+    "country": "Brazil",
+    "code": "br"
+  },
+  "British": {
+    "country": "United Kingdom",
+    "code": "gb"
+  },
+  "British Virgin Island": {
+    "country": "British Virgin Islands",
+    "code": "vg"
+  },
+  "British Virgin Islander": {
+    "country": "British Virgin Islands",
+    "code": "vg"
+  },
+  "Bruneian": {
+    "country": "Brunei",
+    "code": "bn"
+  },
+  "Buckeye": {
+    "country": "Ohio",
+    "code": "us-oh"
+  },
+  "Bulgarian": {
+    "country": "Bulgaria",
+    "code": "bg"
+  },
+  "Burkinabe": {
+    "country": "Burkina Faso",
+    "code": "bf"
+  },
+  "Burkinabè": {
+    "country": "Burkina Faso",
+    "code": "bf"
+  },
+  "Burundian": {
+    "country": "Burundi",
+    "code": "bi"
+  },
+  "Butternut": {
+    "country": "Tennessee",
+    "code": "us-tn"
+  },
+  "Buzzard": {
+    "country": "Georgia",
+    "code": "ge"
+  },
+  "Californian": {
+    "country": "California",
+    "code": "us-ca"
+  },
+  "Californio": {
+    "country": "California",
+    "code": "us-ca"
+  },
+  "Cambodian": {
+    "country": "Cambodia",
+    "code": "kh"
+  },
+  "Cameroonian": {
+    "country": "Cameroon",
+    "code": "cm"
+  },
+  "Canadian": {
+    "country": "Canada",
+    "code": "ca"
+  },
+  "Canadien": {
+    "country": "Canada",
+    "code": "ca"
+  },
+  "Canadienne": {
+    "country": "Canada",
+    "code": "ca"
+  },
+  "Canuck": {
+    "country": "Canada",
+    "code": "ca"
+  },
+  "Cape Verdian": {
+    "country": "Cape Verde",
+    "code": "cv"
+  },
+  "Caymanian": {
+    "country": "Cayman Islands",
+    "code": "ky"
+  },
+  "Central African": {
+    "country": "Central African Republic",
+    "code": "cf"
+  },
+  "Chadian": {
+    "country": "Chad",
+    "code": "td"
+  },
+  "Channel Island": {
+    "country": "Guernsey",
+    "code": "gg"
+  },
+  "Channel Islander": {
+    "country": "Guernsey",
+    "code": "gg"
+  },
+  "Chilean": {
+    "country": "Chile",
+    "code": "cl"
+  },
+  "Chinese": {
+    "country": "China",
+    "code": "cn"
+  },
+  "Chino": {
+    "country": "China",
+    "code": "cn"
+  },
+  "Christmas Island": {
+    "country": "Christmas Island",
+    "code": "cx"
+  },
+  "Christmas Islander": {
+    "country": "Christmas Island",
+    "code": "cx"
+  },
+  "Colombian": {
+    "country": "Colombia",
+    "code": "co"
+  },
+  "Coloradoan": {
+    "country": "Colorado",
+    "code": "us-co"
+  },
+  "Comoran": {
+    "country": "Comoros",
+    "code": "km"
+  },
+  "Comorian": {
+    "country": "Comoros",
+    "code": "km"
+  },
+  "Connecticotian": {
+    "country": "Connecticut",
+    "code": "us-ct"
+  },
+  "Connecticutensian": {
+    "country": "Connecticut",
+    "code": "us-ct"
+  },
+  "Connecticuter": {
+    "country": "Connecticut",
+    "code": "us-ct"
+  },
+  "Connecticutian": {
+    "country": "Connecticut",
+    "code": "us-ct"
+  },
+  "Connetian": {
+    "country": "Connecticut",
+    "code": "us-ct"
+  },
+  "Cook Island": {
+    "country": "Cook Islands",
+    "code": "ck"
+  },
+  "Cook Islander": {
+    "country": "Cook Islands",
+    "code": "ck"
+  },
+  "Corncracker": {
+    "country": "Kentucky",
+    "code": "us-ky"
+  },
+  "Cornhusker": {
+    "country": "Nebraska",
+    "code": "us-ne"
+  },
+  "Costa Rican": {
+    "country": "Costa Rica",
+    "code": "cr"
+  },
+  "Cracker": {
+    "country": "Florida",
+    "code": "us-fl"
+  },
+  "Croat": {
+    "country": "Croatia",
+    "code": "hr"
+  },
+  "Croatian": {
+    "country": "Croatia",
+    "code": "hr"
+  },
+  "Cuban": {
+    "country": "Cuba",
+    "code": "cu"
+  },
+  "Curaçaoan": {
+    "country": "Curaçao",
+    "code": "cw"
+  },
+  "Cypriot": {
+    "country": "Cyprus",
+    "code": "cy"
+  },
+  "Cypriote": {
+    "country": "Cyprus",
+    "code": "cy"
+  },
+  "Dane": {
+    "country": "Denmark",
+    "code": "dk"
+  },
+  "Danish": {
+    "country": "Denmark",
+    "code": "dk"
+  },
+  "Dansker": {
+    "country": "Denmark",
+    "code": "dk"
+  },
+  "Delawarean": {
+    "country": "Delaware",
+    "code": "us-de"
+  },
+  "Djibouti": {
+    "country": "Djibouti",
+    "code": "dj"
+  },
+  "Djiboutian": {
+    "country": "Djibouti",
+    "code": "dj"
+  },
+  "Dominican": {
+    "country": "Dominica",
+    "code": "dm"
+  },
+  "Down Easter": {
+    "country": "Maine",
+    "code": "us-me"
+  },
+  "Downeaster": {
+    "country": "Maine",
+    "code": "us-me"
+  },
+  "Dutch": {
+    "country": "Netherlands",
+    "code": "nl"
+  },
+  "Ecuadorian": {
+    "country": "Ecuador",
+    "code": "ec"
+  },
+  "Egyptian": {
+    "country": "Egypt",
+    "code": "eg"
+  },
+  "Emirati": {
+    "country": "United Arab Emirates",
+    "code": "ae"
+  },
+  "Emirian": {
+    "country": "United Arab Emirates",
+    "code": "ae"
+  },
+  "English": {
+    "country": "England",
+    "code": "gb-eng"
+  },
+  "Englishman": {
+    "country": "England",
+    "code": "gb-eng"
+  },
+  "Englishwoman": {
+    "country": "England",
+    "code": "gb-eng"
+  },
+  "Equatoguinean": {
+    "country": "Equatorial Guinea",
+    "code": "gq"
+  },
+  "Equatorial Guinean": {
+    "country": "Equatorial Guinea",
+    "code": "gq"
+  },
+  "Eritrean": {
+    "country": "Eritrea",
+    "code": "er"
+  },
+  "Estonian": {
+    "country": "Estonia",
+    "code": "ee"
+  },
+  "Ethiopian": {
+    "country": "Ethiopia",
+    "code": "et"
+  },
+  "Falkland Island": {
+    "country": "Falkland Islands",
+    "code": "fk"
+  },
+  "Falkland Islander": {
+    "country": "Falkland Islands",
+    "code": "fk"
+  },
+  "Faroese": {
+    "country": "Faroe Islands",
+    "code": "fo"
+  },
+  "Fijian": {
+    "country": "Fiji",
+    "code": "fj"
+  },
+  "Filipino": {
+    "country": "Philippines",
+    "code": "ph"
+  },
+  "Finn": {
+    "country": "Finland",
+    "code": "fi"
+  },
+  "Finnic": {
+    "country": "Finland",
+    "code": "fi"
+  },
+  "Finnish": {
+    "country": "Finland",
+    "code": "fi"
+  },
+  "Flatlander": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Florida Cracker": {
+    "country": "Florida",
+    "code": "us-fl"
+  },
+  "Floridan": {
+    "country": "Florida",
+    "code": "us-fl"
+  },
+  "Floridian": {
+    "country": "Florida",
+    "code": "us-fl"
+  },
+  "Fox": {
+    "country": "Maine",
+    "code": "us-me"
+  },
+  "French": {
+    "country": "France",
+    "code": "fr"
+  },
+  "French Guianese": {
+    "country": "French Guiana",
+    "code": "gf"
+  },
+  "French Polynesian": {
+    "country": "French Polynesia",
+    "code": "pf"
+  },
+  "Frenchman": {
+    "country": "France",
+    "code": "fr"
+  },
+  "Frenchwoman": {
+    "country": "France",
+    "code": "fr"
+  },
+  "Gabonese": {
+    "country": "Gabon",
+    "code": "ga"
+  },
+  "Georgian": {
+    "country": "Georgia",
+    "code": "ge"
+  },
+  "German": {
+    "country": "Germany",
+    "code": "de"
+  },
+  "Ghanaian": {
+    "country": "Ghana",
+    "code": "gh"
+  },
+  "Gibraltar": {
+    "country": "Gibraltar",
+    "code": "gi"
+  },
+  "Gibraltarian": {
+    "country": "Gibraltar",
+    "code": "gi"
+  },
+  "Goober-Grabber": {
+    "country": "Georgia",
+    "code": "ge"
+  },
+  "Grasshopper": {
+    "country": "Kansas",
+    "code": "us-ks"
+  },
+  "Greek": {
+    "country": "Greece",
+    "code": "gr"
+  },
+  "Greenlandic": {
+    "country": "Greenland",
+    "code": "gl"
+  },
+  "Grenadian": {
+    "country": "Grenada",
+    "code": "gd"
+  },
+  "Guadeloupe": {
+    "country": "Guadeloupe",
+    "code": "gp"
+  },
+  "Guadeloupean": {
+    "country": "Guadeloupe",
+    "code": "gp"
+  },
+  "Guamanian": {
+    "country": "Guam",
+    "code": "gu"
+  },
+  "Guambat": {
+    "country": "Guam",
+    "code": "gu"
+  },
+  "Guatemalan": {
+    "country": "Guatemala",
+    "code": "gt"
+  },
+  "Guernsey": {
+    "country": "Guernsey",
+    "code": "gg"
+  },
+  "Guinea-Bissauan": {
+    "country": "Guinea-Bissau",
+    "code": "gw"
+  },
+  "Guinean": {
+    "country": "Guinea",
+    "code": "gn"
+  },
+  "Gurkhas": {
+    "country": "Nepal",
+    "code": "np"
+  },
+  "Guyanese": {
+    "country": "Guyana",
+    "code": "gy"
+  },
+  "Haitian": {
+    "country": "Haiti",
+    "code": "ht"
+  },
+  "Hawaii Resident": {
+    "country": "Hawaii",
+    "code": "us-hi"
+  },
+  "Hawaiian": {
+    "country": "Hawaii",
+    "code": "us-hi"
+  },
+  "Hawkeye": {
+    "country": "Iowa",
+    "code": "us-ia"
+  },
+  "Hellene": {
+    "country": "Greece",
+    "code": "gr"
+  },
+  "Hellenic": {
+    "country": "Greece",
+    "code": "gr"
+  },
+  "Hollander": {
+    "country": "Netherlands",
+    "code": "nl"
+  },
+  "Honduran": {
+    "country": "Honduras",
+    "code": "hn"
+  },
+  "Hong Kong": {
+    "country": "Hong Kong",
+    "code": "hk"
+  },
+  "Hong Kong Chinese": {
+    "country": "Hong Kong",
+    "code": "hk"
+  },
+  "Hong Konger": {
+    "country": "Hong Kong",
+    "code": "hk"
+  },
+  "Hongkonger": {
+    "country": "Hong Kong",
+    "code": "hk"
+  },
+  "Hongkongese": {
+    "country": "Hong Kong",
+    "code": "hk"
+  },
+  "Hongkongish": {
+    "country": "Hong Kong",
+    "code": "hk"
+  },
+  "Hoosier": {
+    "country": "Indiana",
+    "code": "us-in"
+  },
+  "Hungarian": {
+    "country": "Hungary",
+    "code": "hu"
+  },
+  "Icelandic": {
+    "country": "Iceland",
+    "code": "is"
+  },
+  "Idahoan": {
+    "country": "Idaho",
+    "code": "us-id"
+  },
+  "I-Kiribati": {
+    "country": "Kiribati",
+    "code": "ki"
+  },
+  "Illinian": {
+    "country": "Illinois",
+    "code": "us-il"
+  },
+  "Illinoian": {
+    "country": "Illinois",
+    "code": "us-il"
+  },
+  "Illinoisan": {
+    "country": "Illinois",
+    "code": "us-il"
+  },
+  "Illinoisian": {
+    "country": "Illinois",
+    "code": "us-il"
+  },
+  "Indian": {
+    "country": "India",
+    "code": "in"
+  },
+  "Indianian": {
+    "country": "Indiana",
+    "code": "us-in"
+  },
+  "Indonesian": {
+    "country": "Indonesia",
+    "code": "id"
+  },
+  "Innuit": {
+    "country": "Alaska",
+    "code": "us-ak"
+  },
+  "Iowan": {
+    "country": "Iowa",
+    "code": "us-ia"
+  },
+  "Iowegian": {
+    "country": "Iowa",
+    "code": "us-ia"
+  },
+  "Irani": {
+    "country": "Iran",
+    "code": "ir"
+  },
+  "Iranian": {
+    "country": "Iran",
+    "code": "ir"
+  },
+  "Iraqi": {
+    "country": "Iraq",
+    "code": "iq"
+  },
+  "Irish": {
+    "country": "Ireland",
+    "code": "ie"
+  },
+  "Irishman": {
+    "country": "Ireland",
+    "code": "ie"
+  },
+  "Irishwoman": {
+    "country": "Ireland",
+    "code": "ie"
+  },
+  "Islander": {
+    "country": "Hawaii",
+    "code": "us-hi"
+  },
+  "Israeli": {
+    "country": "Israel",
+    "code": "il"
+  },
+  "Israelite": {
+    "country": "Israel",
+    "code": "il"
+  },
+  "Italian": {
+    "country": "Italy",
+    "code": "it"
+  },
+  "Jamaican": {
+    "country": "Jamaica",
+    "code": "jm"
+  },
+  "Japanese": {
+    "country": "Japan",
+    "code": "jp"
+  },
+  "Jerseyan": {
+    "country": "Jersey",
+    "code": "je"
+  },
+  "Jerseyite": {
+    "country": "New Jersey",
+    "code": "us-nj"
+  },
+  "Jock": {
+    "country": "Scotland",
+    "code": "gb-sct"
+  },
+  "Jordanian": {
+    "country": "Jordan",
+    "code": "jo"
+  },
+  "Kamaaina": {
+    "country": "Hawaii",
+    "code": "us-hi"
+  },
+  "Kamaʻāina": {
+    "country": "Hawaii",
+    "code": "us-hi"
+  },
+  "Kansan": {
+    "country": "Kansas",
+    "code": "us-ks"
+  },
+  "Kazakhstani": {
+    "country": "Kazakhstan",
+    "code": "kz"
+  },
+  "Kentuckian": {
+    "country": "Kentucky",
+    "code": "us-ky"
+  },
+  "Kenyan": {
+    "country": "Kenya",
+    "code": "ke"
+  },
+  "Khmer": {
+    "country": "Cambodia",
+    "code": "kh"
+  },
+  "Kiwi": {
+    "country": "New Zealand",
+    "code": "nz"
+  },
+  "Knickerbocker": {
+    "country": "New York",
+    "code": "us-ny"
+  },
+  "Kuwaiti": {
+    "country": "Kuwait",
+    "code": "kw"
+  },
+  "Kyrgyz": {
+    "country": "Kyrgyzstan",
+    "code": "kg"
+  },
+  "Lao": {
+    "country": "Laos",
+    "code": "la"
+  },
+  "Laotian": {
+    "country": "Laos",
+    "code": "la"
+  },
+  "Latvian": {
+    "country": "Latvia",
+    "code": "lv"
+  },
+  "Lebanese": {
+    "country": "Lebanon",
+    "code": "lb"
+  },
+  "Liberian": {
+    "country": "Liberia",
+    "code": "lr"
+  },
+  "Libyan": {
+    "country": "Libya",
+    "code": "ly"
+  },
+  "Liechtenstein": {
+    "country": "Liechtenstein",
+    "code": "li"
+  },
+  "Liechtensteiner": {
+    "country": "Liechtenstein",
+    "code": "li"
+  },
+  "Lithuanian": {
+    "country": "Lithuania",
+    "code": "lt"
+  },
+  "Louisianian": {
+    "country": "Louisiana",
+    "code": "us-la"
+  },
+  "Luxembourg": {
+    "country": "Luxembourg",
+    "code": "lu"
+  },
+  "Luxembourger": {
+    "country": "Luxembourg",
+    "code": "lu"
+  },
+  "Luxembourgish": {
+    "country": "Luxembourg",
+    "code": "lu"
+  },
+  "Macanese": {
+    "country": "Macau",
+    "code": "mo"
+  },
+  "Magyar": {
+    "country": "Hungary",
+    "code": "hu"
+  },
+  "Mahorais": {
+    "country": "Mayotte",
+    "code": "yt"
+  },
+  "Mahoran": {
+    "country": "Mayotte",
+    "code": "yt"
+  },
+  "Maineiac": {
+    "country": "Maine",
+    "code": "us-me"
+  },
+  "Mainer": {
+    "country": "Maine",
+    "code": "us-me"
+  },
+  "Mainiac": {
+    "country": "Maine",
+    "code": "us-me"
+  },
+  "Malagasy": {
+    "country": "Madagascar",
+    "code": "mg"
+  },
+  "Malawian": {
+    "country": "Malawi",
+    "code": "mw"
+  },
+  "Malaysian": {
+    "country": "Malaysia",
+    "code": "my"
+  },
+  "Maldivian": {
+    "country": "Maldives",
+    "code": "mv"
+  },
+  "Malian": {
+    "country": "Mali",
+    "code": "ml"
+  },
+  "Malihini": {
+    "country": "Hawaii",
+    "code": "us-hi"
+  },
+  "Malinese": {
+    "country": "Mali",
+    "code": "ml"
+  },
+  "Maltese": {
+    "country": "Malta",
+    "code": "mt"
+  },
+  "Marshallese": {
+    "country": "Marshall Islands",
+    "code": "mh"
+  },
+  "Martinican": {
+    "country": "Martinique",
+    "code": "mq"
+  },
+  "Martiniquais": {
+    "country": "Martinique",
+    "code": "mq"
+  },
+  "Marylander": {
+    "country": "Maryland",
+    "code": "us-md"
+  },
+  "Mashugana": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Massachusettsan": {
+    "country": "Massachusetts",
+    "code": "us-ma"
+  },
+  "Massachusite": {
+    "country": "Massachusetts",
+    "code": "us-ma"
+  },
+  "Masshole": {
+    "country": "Massachusetts",
+    "code": "us-ma"
+  },
+  "Mauritanian": {
+    "country": "Mauritania",
+    "code": "mr"
+  },
+  "Mauritian": {
+    "country": "Mauritius",
+    "code": "mu"
+  },
+  "Mexican": {
+    "country": "Mexico",
+    "code": "mx"
+  },
+  "Mexicano": {
+    "country": "Mexico",
+    "code": "mx"
+  },
+  "Michigander": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Michiganer": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Michiganese": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Michiganian": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Michiganite": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Michigine": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Micronesian": {
+    "country": "Micronesia",
+    "code": "fm"
+  },
+  "Minnesotan": {
+    "country": "Minnesota",
+    "code": "us-mn"
+  },
+  "Mississippian": {
+    "country": "Mississippi",
+    "code": "us-ms"
+  },
+  "Missourian": {
+    "country": "Missouri",
+    "code": "us-mo"
+  },
+  "Moldovan": {
+    "country": "Moldova",
+    "code": "md"
+  },
+  "Monacan": {
+    "country": "Monaco",
+    "code": "mc"
+  },
+  "Monegasque": {
+    "country": "Monaco",
+    "code": "mc"
+  },
+  "Monégasque": {
+    "country": "Monaco",
+    "code": "mc"
+  },
+  "Mongol": {
+    "country": "Mongolia",
+    "code": "mn"
+  },
+  "Mongolian": {
+    "country": "Mongolia",
+    "code": "mn"
+  },
+  "Montanan": {
+    "country": "Montana",
+    "code": "us-mt"
+  },
+  "Montenegrin": {
+    "country": "Montenegro",
+    "code": "me"
+  },
+  "Montserratian": {
+    "country": "Montserrat",
+    "code": "ms"
+  },
+  "Moroccan": {
+    "country": "Morocco",
+    "code": "ma"
+  },
+  "Mosotho": {
+    "country": "Lesotho",
+    "code": "ls"
+  },
+  "Motswana": {
+    "country": "Botswana",
+    "code": "bw"
+  },
+  "Mozambican": {
+    "country": "Mozambique",
+    "code": "mz"
+  },
+  "Muskrat": {
+    "country": "Delaware",
+    "code": "us-de"
+  },
+  "Myanmarese": {
+    "country": "Myanmar",
+    "code": "mm"
+  },
+  "Namibian": {
+    "country": "Namibia",
+    "code": "na"
+  },
+  "Nauruan": {
+    "country": "Nauru",
+    "code": "nr"
+  },
+  "Nebraskan": {
+    "country": "Nebraska",
+    "code": "us-ne"
+  },
+  "Nepali": {
+    "country": "Nepal",
+    "code": "np"
+  },
+  "Netherlandic": {
+    "country": "Netherlands",
+    "code": "nl"
+  },
+  "Nevadian": {
+    "country": "Nevada",
+    "code": "us-nv"
+  },
+  "New Caledonian": {
+    "country": "New Caledonia",
+    "code": "nc"
+  },
+  "New Hampshireman": {
+    "country": "New Hampshire",
+    "code": "us-nh"
+  },
+  "New Hampshirewoman": {
+    "country": "New Hampshire",
+    "code": "us-nh"
+  },
+  "New Hampshirite": {
+    "country": "New Hampshire",
+    "code": "us-nh"
+  },
+  "New Jerseyite": {
+    "country": "New Jersey",
+    "code": "us-nj"
+  },
+  "New Mexican": {
+    "country": "New Mexico",
+    "code": "us-nm"
+  },
+  "New Yorker": {
+    "country": "New York",
+    "code": "us-ny"
+  },
+  "New Zealand": {
+    "country": "New Zealand",
+    "code": "nz"
+  },
+  "New Zealander": {
+    "country": "New Zealand",
+    "code": "nz"
+  },
+  "Nicaraguan": {
+    "country": "Nicaragua",
+    "code": "ni"
+  },
+  "Nicoya": {
+    "country": "Nicaragua",
+    "code": "ni"
+  },
+  "Nigerian": {
+    "country": "Nigeria",
+    "code": "ng"
+  },
+  "Nigerien": {
+    "country": "Niger",
+    "code": "ne"
+  },
+  "Niuean": {
+    "country": "Niue",
+    "code": "nu"
+  },
+  "Ni-Vanuatu": {
+    "country": "Vanuatu",
+    "code": "vu"
+  },
+  "Nordmann": {
+    "country": "Norway",
+    "code": "no"
+  },
+  "Norfolk Island": {
+    "country": "Norfolk Island",
+    "code": "nf"
+  },
+  "Norfolk Islander": {
+    "country": "Norfolk Island",
+    "code": "nf"
+  },
+  "North Carolinian": {
+    "country": "North Carolina",
+    "code": "us-nc"
+  },
+  "North Dakotan": {
+    "country": "North Dakota",
+    "code": "us-nd"
+  },
+  "North Korean": {
+    "country": "North Korea",
+    "code": "kp"
+  },
+  "Northern Irish": {
+    "country": "Northern Ireland",
+    "code": "gb-nir"
+  },
+  "Northern Irishman": {
+    "country": "Northern Ireland",
+    "code": "gb-nir"
+  },
+  "Northern Irishwoman": {
+    "country": "Northern Ireland",
+    "code": "gb-nir"
+  },
+  "Northern Marianan": {
+    "country": "Northern Mariana Islands",
+    "code": "mp"
+  },
+  "Norwegian": {
+    "country": "Norway",
+    "code": "no"
+  },
+  "Nutmegger": {
+    "country": "Connecticut",
+    "code": "us-ct"
+  },
+  "Nz": {
+    "country": "New Zealand",
+    "code": "nz"
+  },
+  "Ohioan": {
+    "country": "Ohio",
+    "code": "us-oh"
+  },
+  "Okie": {
+    "country": "Oklahoma",
+    "code": "us-ok"
+  },
+  "Oklahoman": {
+    "country": "Oklahoma",
+    "code": "us-ok"
+  },
+  "Omani": {
+    "country": "Oman",
+    "code": "om"
+  },
+  "Oregonian": {
+    "country": "Oregon",
+    "code": "us-or"
+  },
+  "Ozzie": {
+    "country": "Australia",
+    "code": "au"
+  },
+  "Pakistani": {
+    "country": "Pakistan",
+    "code": "pk"
+  },
+  "Palauan": {
+    "country": "Palau",
+    "code": "pw"
+  },
+  "Palestinian": {
+    "country": "Palestine",
+    "code": "ps"
+  },
+  "Panamanian": {
+    "country": "Panama",
+    "code": "pa"
+  },
+  "Papua New Guinean": {
+    "country": "Papua New Guinea",
+    "code": "pg"
+  },
+  "Papuan": {
+    "country": "Papua New Guinea",
+    "code": "pg"
+  },
+  "Paraguayan": {
+    "country": "Paraguay",
+    "code": "py"
+  },
+  "Pennamite": {
+    "country": "Pennsylvania",
+    "code": "us-pa"
+  },
+  "Pennsylvanian": {
+    "country": "Pennsylvania",
+    "code": "us-pa"
+  },
+  "Peruvian": {
+    "country": "Peru",
+    "code": "pe"
+  },
+  "Philippine": {
+    "country": "Philippines",
+    "code": "ph"
+  },
+  "Pinay": {
+    "country": "Philippines",
+    "code": "ph"
+  },
+  "Pine Tree": {
+    "country": "Maine",
+    "code": "us-me"
+  },
+  "Pinoy": {
+    "country": "Philippines",
+    "code": "ph"
+  },
+  "Pitcairn Island": {
+    "country": "Pitcairn Islands",
+    "code": "pn"
+  },
+  "Pitcairn Islander": {
+    "country": "Pitcairn Islands",
+    "code": "pn"
+  },
+  "Pole": {
+    "country": "Poland",
+    "code": "pl"
+  },
+  "Polish": {
+    "country": "Poland",
+    "code": "pl"
+  },
+  "Portuguese": {
+    "country": "Portugal",
+    "code": "pt"
+  },
+  "Puerto Rican": {
+    "country": "Puerto Rico",
+    "code": "pr"
+  },
+  "Qatari": {
+    "country": "Qatar",
+    "code": "qa"
+  },
+  "Réunionese": {
+    "country": "Réunion",
+    "code": "re"
+  },
+  "Réunionnais": {
+    "country": "Réunion",
+    "code": "re"
+  },
+  "Rhode Islander": {
+    "country": "Rhode Island",
+    "code": "us-ri"
+  },
+  "Rhodean": {
+    "country": "Rhode Island",
+    "code": "us-ri"
+  },
+  "Romanian": {
+    "country": "Romania",
+    "code": "ro"
+  },
+  "Russian": {
+    "country": "Russia",
+    "code": "ru"
+  },
+  "Rwandan": {
+    "country": "Rwanda",
+    "code": "rw"
+  },
+  "Rwandese": {
+    "country": "Rwanda",
+    "code": "rw"
+  },
+  "Sahraoui": {
+    "country": "Western Sahara",
+    "code": "eh"
+  },
+  "Sahrawi": {
+    "country": "Western Sahara",
+    "code": "eh"
+  },
+  "Sahrawian": {
+    "country": "Western Sahara",
+    "code": "eh"
+  },
+  "Saint Lucian": {
+    "country": "Saint Lucia",
+    "code": "lc"
+  },
+  "Saint-Martinoise": {
+    "country": "Saint Martin",
+    "code": "mf"
+  },
+  "Salvadoran": {
+    "country": "El Salvador",
+    "code": "sv"
+  },
+  "Salvadoreño": {
+    "country": "El Salvador",
+    "code": "sv"
+  },
+  "Sammarinese": {
+    "country": "San Marino",
+    "code": "sm"
+  },
+  "Samoan": {
+    "country": "Samoa",
+    "code": "ws"
+  },
+  "San Marinese": {
+    "country": "San Marino",
+    "code": "sm"
+  },
+  "Sand Cutter": {
+    "country": "Arizona",
+    "code": "us-az"
+  },
+  "Sand-Hiller": {
+    "country": "Georgia",
+    "code": "ge"
+  },
+  "Sandlapper": {
+    "country": "South Carolina",
+    "code": "us-sc"
+  },
+  "Sarnian": {
+    "country": "Guernsey",
+    "code": "gg"
+  },
+  "Saudi": {
+    "country": "Saudi Arabia",
+    "code": "sa"
+  },
+  "Saudi Arabian": {
+    "country": "Saudi Arabia",
+    "code": "sa"
+  },
+  "Sconnie": {
+    "country": "Wisconsin",
+    "code": "us-wi"
+  },
+  "Scot": {
+    "country": "Scotland",
+    "code": "gb-sct"
+  },
+  "Scots": {
+    "country": "Scotland",
+    "code": "gb-sct"
+  },
+  "Scottish": {
+    "country": "Scotland",
+    "code": "gb-sct"
+  },
+  "Senegalese": {
+    "country": "Senegal",
+    "code": "sn"
+  },
+  "Serb": {
+    "country": "Serbia",
+    "code": "rs"
+  },
+  "Serbian": {
+    "country": "Serbia",
+    "code": "rs"
+  },
+  "Seychellois": {
+    "country": "Seychelles",
+    "code": "sc"
+  },
+  "Sierra Leonean": {
+    "country": "Sierra Leone",
+    "code": "sl"
+  },
+  "Singapore": {
+    "country": "Singapore",
+    "code": "sg"
+  },
+  "Singaporean": {
+    "country": "Singapore",
+    "code": "sg"
+  },
+  "Sint Maarten": {
+    "country": "Sint Maarten",
+    "code": "sx"
+  },
+  "Slovak": {
+    "country": "Slovakia",
+    "code": "sk"
+  },
+  "Slovakian": {
+    "country": "Slovakia",
+    "code": "sk"
+  },
+  "Slovene": {
+    "country": "Slovenia",
+    "code": "si"
+  },
+  "Slovenian": {
+    "country": "Slovenia",
+    "code": "si"
+  },
+  "Solomon Island": {
+    "country": "Solomon Islands",
+    "code": "sb"
+  },
+  "Solomon Islander": {
+    "country": "Solomon Islands",
+    "code": "sb"
+  },
+  "Somali": {
+    "country": "Somalia",
+    "code": "so"
+  },
+  "Somalian": {
+    "country": "Somalia",
+    "code": "so"
+  },
+  "Sooner": {
+    "country": "Oklahoma",
+    "code": "us-ok"
+  },
+  "South African": {
+    "country": "South Africa",
+    "code": "za"
+  },
+  "South Carolinian": {
+    "country": "South Carolina",
+    "code": "us-sc"
+  },
+  "South Dakotan": {
+    "country": "South Dakota",
+    "code": "us-sd"
+  },
+  "South Korean": {
+    "country": "South Korea",
+    "code": "kr"
+  },
+  "South Sudanese": {
+    "country": "South Sudan",
+    "code": "ss"
+  },
+  "Spaniard": {
+    "country": "Spain",
+    "code": "es"
+  },
+  "Spanish": {
+    "country": "Spain",
+    "code": "es"
+  },
+  "Sri Lankan": {
+    "country": "Sri Lanka",
+    "code": "lk"
+  },
+  "Sudanese": {
+    "country": "Sudan",
+    "code": "sd"
+  },
+  "Sunflower": {
+    "country": "Kansas",
+    "code": "us-ks"
+  },
+  "Surinamer": {
+    "country": "Suriname",
+    "code": "sr"
+  },
+  "Surinamese": {
+    "country": "Suriname",
+    "code": "sr"
+  },
+  "Swamp Yankee": {
+    "country": "Rhode Island",
+    "code": "us-ri"
+  },
+  "Swede": {
+    "country": "Sweden",
+    "code": "se"
+  },
+  "Swedish": {
+    "country": "Sweden",
+    "code": "se"
+  },
+  "Swiss": {
+    "country": "Switzerland",
+    "code": "ch"
+  },
+  "Syrian": {
+    "country": "Syria",
+    "code": "sy"
+  },
+  "Tadzhik": {
+    "country": "Tajikistan",
+    "code": "tj"
+  },
+  "Taff": {
+    "country": "Wales",
+    "code": "gb-wls"
+  },
+  "Taiwanese": {
+    "country": "Taiwan",
+    "code": "tw"
+  },
+  "Tajik": {
+    "country": "Tajikistan",
+    "code": "tj"
+  },
+  "Tajikistani": {
+    "country": "Tajikistan",
+    "code": "tj"
+  },
+  "Tanzanian": {
+    "country": "Tanzania",
+    "code": "tz"
+  },
+  "Tar Boiler": {
+    "country": "North Carolina",
+    "code": "us-nc"
+  },
+  "Tar Heel": {
+    "country": "North Carolina",
+    "code": "us-nc"
+  },
+  "Tejano": {
+    "country": "Texas",
+    "code": "us-tx"
+  },
+  "Tenesseean": {
+    "country": "Tennessee",
+    "code": "us-tn"
+  },
+  "Tennesseean": {
+    "country": "Tennessee",
+    "code": "us-tn"
+  },
+  "Texian": {
+    "country": "Texas",
+    "code": "us-tx"
+  },
+  "Texican": {
+    "country": "Texas",
+    "code": "us-tx"
+  },
+  "Thai": {
+    "country": "Thailand",
+    "code": "th"
+  },
+  "Timorese": {
+    "country": "Timor-Leste",
+    "code": "tl"
+  },
+  "Togolese": {
+    "country": "Togo",
+    "code": "tg"
+  },
+  "Tokelauan": {
+    "country": "Tokelau",
+    "code": "tk"
+  },
+  "Tongan": {
+    "country": "Tonga",
+    "code": "to"
+  },
+  "Troll": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Tunisian": {
+    "country": "Tunisia",
+    "code": "tn"
+  },
+  "Turk": {
+    "country": "Turkey",
+    "code": "tr"
+  },
+  "Turkic": {
+    "country": "Turkey",
+    "code": "tr"
+  },
+  "Turkish": {
+    "country": "Turkey",
+    "code": "tr"
+  },
+  "Turkmen": {
+    "country": "Turkmenistan",
+    "code": "tm"
+  },
+  "Turkmenistani": {
+    "country": "Turkmenistan",
+    "code": "tm"
+  },
+  "Tuvaluan": {
+    "country": "Tuvalu",
+    "code": "tv"
+  },
+  "U.S. Virgin Island": {
+    "country": "United States Virgin Islands",
+    "code": "vi"
+  },
+  "Ugandan": {
+    "country": "Uganda",
+    "code": "ug"
+  },
+  "Uk": {
+    "country": "United Kingdom",
+    "code": "gb"
+  },
+  "Ukrainian": {
+    "country": "Ukraine",
+    "code": "ua"
+  },
+  "Ulsterman": {
+    "country": "Northern Ireland",
+    "code": "gb-nir"
+  },
+  "United States": {
+    "country": "United States",
+    "code": "us"
+  },
+  "Uruguayan": {
+    "country": "Uruguay",
+    "code": "uy"
+  },
+  "US": {
+    "country": "United States",
+    "code": "us"
+  },
+  "U.S.": {
+    "country": "United States",
+    "code": "us"
+  },
+  "Utahn": {
+    "country": "Utah",
+    "code": "us-ut"
+  },
+  "Uzbek": {
+    "country": "Uzbekistan",
+    "code": "uz"
+  },
+  "Uzbekistani": {
+    "country": "Uzbekistan",
+    "code": "uz"
+  },
+  "Vanuatuan": {
+    "country": "Vanuatu",
+    "code": "vu"
+  },
+  "Venezuelan": {
+    "country": "Venezuela",
+    "code": "ve"
+  },
+  "Vermonter": {
+    "country": "Vermont",
+    "code": "us-vt"
+  },
+  "Vietnamese": {
+    "country": "Vietnam",
+    "code": "vn"
+  },
+  "Virginian": {
+    "country": "Virginia",
+    "code": "us-va"
+  },
+  "Virginians": {
+    "country": "Virginia",
+    "code": "us-va"
+  },
+  "Washingtonian": {
+    "country": "Washington",
+    "code": "us-wa"
+  },
+  "Welsh": {
+    "country": "Wales",
+    "code": "gb-wls"
+  },
+  "Welshman": {
+    "country": "Wales",
+    "code": "gb-wls"
+  },
+  "Welshwoman": {
+    "country": "Wales",
+    "code": "gb-wls"
+  },
+  "West Virginian": {
+    "country": "West Virginia",
+    "code": "us-wv"
+  },
+  "Wisconsinite": {
+    "country": "Wisconsin",
+    "code": "us-wi"
+  },
+  "Wolverine": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Wyomingite": {
+    "country": "Wyoming",
+    "code": "us-wy"
+  },
+  "Yemeni": {
+    "country": "Yemen",
+    "code": "ye"
+  },
+  "Yemenite": {
+    "country": "Yemen",
+    "code": "ye"
+  },
+  "Yooper": {
+    "country": "Michigan",
+    "code": "us-mi"
+  },
+  "Zambian": {
+    "country": "Zambia",
+    "code": "zm"
+  },
+  "Zimbabwean": {
+    "country": "Zimbabwe",
+    "code": "zw"
+  },
+  "Ecuadoran": {
+    "country": "Ecuador",
+    "code": "ec"
+  }
+}
