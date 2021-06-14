@@ -1,41 +1,41 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016.62 607.6">
     <defs>
-      <style>.cls-1 {
+      <style>.uae-1 {
         fill: #00732e;
         }
 
-        .cls-2 {
+        .uae-2 {
         fill: #fff;
         }
 
-        .cls-3 {
+        .uae-3 {
         fill: #fe0000;
         }
 
-        .cls-4 {
+        .uae-4 {
         fill: #ddd;
         }
 
-        .cls-5 {
+        .uae-5 {
         fill: #005b25;
         }
 
-        .cls-6 {
+        .uae-6 {
         fill: #1a1a1a;
         }</style>
     </defs>
     <g id="Layer_2" data-name="Layer 2">
       <g id="Abu_Dhabi">
         <g id="flag">
-          <rect class="cls-1" width="1016.62" height="202.53" />
-          <rect class="cls-2" y="202.53" width="1016.62" height="202.53" />
+          <rect class="uae-1" width="1016.62" height="202.53" />
+          <rect class="uae-2" y="202.53" width="1016.62" height="202.53" />
           <rect y="405.06" width="1016.62" height="202.53" />
-          <rect class="cls-3" width="316.63" height="607.6" />
+          <rect class="uae-3" width="316.63" height="607.6" />
         </g>
         <rect
           id="line-1"
-          class="cls-1"
+          class="uae-1"
           x="231.61"
           y="34.81"
           width="7.73"
@@ -43,7 +43,7 @@
         />
         <rect
           id="line-2"
-          class="cls-1"
+          class="uae-1"
           x="199.17"
           y="121.47"
           width="9.33"
@@ -53,7 +53,7 @@
         <rect id="line-4" x="13.84" y="11.08" width="8" height="134.39" />
         <rect
           id="line-5"
-          class="cls-2"
+          class="uae-2"
           x="139.17"
           y="53.56"
           width="19.14"
@@ -61,7 +61,7 @@
         />
         <rect
           id="line-6"
-          class="cls-4"
+          class="uae-4"
           x="395.73"
           y="34.81"
           width="4.46"
@@ -69,7 +69,7 @@
         />
         <rect
           id="line-7"
-          class="cls-4"
+          class="uae-4"
           x="561.84"
           y="66.81"
           width="6.67"
@@ -77,7 +77,7 @@
         />
         <rect
           id="line-8"
-          class="cls-4"
+          class="uae-4"
           x="532.51"
           y="184.14"
           width="8"
@@ -85,7 +85,7 @@
         />
         <rect
           id="line-9"
-          class="cls-5"
+          class="uae-5"
           x="933.84"
           y="53.56"
           width="6.67"
@@ -93,7 +93,7 @@
         />
         <rect
           id="line-10"
-          class="cls-5"
+          class="uae-5"
           x="738.95"
           y="66.81"
           width="10.89"
@@ -101,7 +101,7 @@
         />
         <rect
           id="line-11"
-          class="cls-5"
+          class="uae-5"
           x="444.51"
           y="66.81"
           width="8"
@@ -109,7 +109,7 @@
         />
         <rect
           id="line-12"
-          class="cls-6"
+          class="uae-6"
           x="621.84"
           y="184.14"
           width="9.33"
@@ -117,7 +117,7 @@
         />
         <rect
           id="line-13"
-          class="cls-6"
+          class="uae-6"
           x="823.17"
           y="128.14"
           width="10.27"
@@ -125,7 +125,7 @@
         />
         <rect
           id="line-14"
-          class="cls-6"
+          class="uae-6"
           x="341.84"
           y="373.47"
           width="8"

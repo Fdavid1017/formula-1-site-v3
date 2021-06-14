@@ -1,21 +1,21 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016.62 621.64">
     <defs>
-      <style>.cls-1 {
+      <style>.japan-1 {
         fill: #f2f2f2;
         }
 
-        .cls-2 {
+        .japan-2 {
         fill: #bb002d;
         }</style>
     </defs>
     <g id="Layer_2" data-name="Layer 2">
       <g id="Japan">
-        <rect class="cls-1" width="1016.62" height="621.64" />
-        <circle class="cls-2" cx="508.31" cy="310.82" r="194.83" />
+        <rect class="japan-1" width="1016.62" height="621.64" />
+        <circle class="japan-2" cx="508.31" cy="310.82" r="194.83" />
         <rect
           id="line-1"
-          class="cls-2"
+          class="japan-2"
           x="55.62"
           y="59.99"
           width="4"
@@ -23,7 +23,7 @@
         />
         <rect
           id="line-2"
-          class="cls-2"
+          class="japan-2"
           x="76.95"
           y="112.37"
           width="8"
@@ -31,7 +31,7 @@
         />
         <rect
           id="line-3"
-          class="cls-2"
+          class="japan-2"
           x="94.73"
           y="42.21"
           width="5.33"
@@ -39,7 +39,7 @@
         />
         <rect
           id="line-4"
-          class="cls-2"
+          class="japan-2"
           x="856.51"
           y="125.77"
           width="7.11"
@@ -47,7 +47,7 @@
         />
         <rect
           id="line-5"
-          class="cls-2"
+          class="japan-2"
           x="821.84"
           y="42.21"
           width="7.11"
@@ -55,7 +55,7 @@
         />
         <rect
           id="line-6"
-          class="cls-2"
+          class="japan-2"
           x="622.73"
           y="32.43"
           width="3.56"
@@ -63,7 +63,7 @@
         />
         <rect
           id="line-7"
-          class="cls-2"
+          class="japan-2"
           x="277.84"
           y="32.43"
           width="3.56"
@@ -71,7 +71,7 @@
         />
         <rect
           id="line-8"
-          class="cls-2"
+          class="japan-2"
           x="147.17"
           y="459.1"
           width="4.44"
@@ -79,7 +79,7 @@
         />
         <rect
           id="line-9"
-          class="cls-2"
+          class="japan-2"
           x="965.84"
           y="28.88"
           width="8"
@@ -87,7 +87,7 @@
         />
         <rect
           id="line-10"
-          class="cls-2"
+          class="japan-2"
           x="297.39"
           y="32.43"
           width="8.89"
@@ -95,7 +95,7 @@
         />
         <rect
           id="line-11"
-          class="cls-1"
+          class="japan-1"
           x="478.73"
           y="167.55"
           width="7.11"
@@ -103,7 +103,7 @@
         />
         <rect
           id="line-12"
-          class="cls-1"
+          class="japan-1"
           x="572.95"
           y="285.77"
           width="5.33"
@@ -111,7 +111,7 @@
         />
         <rect
           id="line-13"
-          class="cls-1"
+          class="japan-1"
           x="556.06"
           y="209.87"
           width="8"
@@ -119,7 +119,7 @@
         />
         <rect
           id="line-14"
-          class="cls-1"
+          class="japan-1"
           x="460.06"
           y="318.67"
           width="10.67"
@@ -127,7 +127,7 @@
         />
         <rect
           id="line-15"
-          class="cls-1"
+          class="japan-1"
           x="363.17"
           y="209.87"
           width="7.11"
@@ -135,7 +135,7 @@
         />
         <rect
           id="line-16"
-          class="cls-1"
+          class="japan-1"
           x="590.73"
           y="150.66"
           width="6.22"

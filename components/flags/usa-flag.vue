@@ -1,42 +1,42 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016.62 621.64">
     <defs>
-      <style>.cls-1 {
+      <style>.usa-1 {
         fill: #b32134;
         }
 
-        .cls-2 {
+        .usa-2 {
         fill: #fff;
         }
 
-        .cls-3 {
+        .usa-3 {
         fill: #3b3b6d;
         }
 
-        .cls-4 {
+        .usa-4 {
         fill: #e5e5e5;
         }
 
-        .cls-5 {
+        .usa-5 {
         fill: #aa243b;
         }</style>
     </defs>
     <g id="Layer_2" data-name="Layer 2">
       <g id="USA">
         <g id="base_flag" data-name="base flag">
-          <rect class="cls-1" width="1016.62" height="69.07" />
-          <rect class="cls-2" y="69.07" width="1016.62" height="69.07" />
-          <rect class="cls-1" y="138.14" width="1016.62" height="69.07" />
-          <rect class="cls-2" y="207.21" width="1016.62" height="69.07" />
-          <rect class="cls-1" y="276.29" width="1016.62" height="69.07" />
-          <rect class="cls-2" y="345.36" width="1016.62" height="69.07" />
-          <rect class="cls-1" y="414.43" width="1016.62" height="69.07" />
-          <rect class="cls-2" y="483.5" width="1016.62" height="69.07" />
-          <rect class="cls-1" y="552.57" width="1016.62" height="69.07" />
-          <rect class="cls-3" width="458.28" height="345.36" />
+          <rect class="usa-1" width="1016.62" height="69.07" />
+          <rect class="usa-2" y="69.07" width="1016.62" height="69.07" />
+          <rect class="usa-1" y="138.14" width="1016.62" height="69.07" />
+          <rect class="usa-2" y="207.21" width="1016.62" height="69.07" />
+          <rect class="usa-1" y="276.29" width="1016.62" height="69.07" />
+          <rect class="usa-2" y="345.36" width="1016.62" height="69.07" />
+          <rect class="usa-1" y="414.43" width="1016.62" height="69.07" />
+          <rect class="usa-2" y="483.5" width="1016.62" height="69.07" />
+          <rect class="usa-1" y="552.57" width="1016.62" height="69.07" />
+          <rect class="usa-3" width="458.28" height="345.36" />
           <rect
             id="line-9"
-            class="cls-4"
+            class="usa-4"
             x="204.95"
             y="379.41"
             width="10.67"
@@ -44,7 +44,7 @@
           />
           <rect
             id="line-10"
-            class="cls-4"
+            class="usa-4"
             x="532.06"
             y="27.86"
             width="8"
@@ -52,7 +52,7 @@
           />
           <rect
             id="line-11"
-            class="cls-5"
+            class="usa-5"
             x="300.95"
             y="34.54"
             width="8.89"
@@ -60,7 +60,7 @@
           />
           <rect
             id="line-12"
-            class="cls-5"
+            class="usa-5"
             x="65.39"
             y="129.87"
             width="7.11"
@@ -68,7 +68,7 @@
           />
           <rect
             id="line-13"
-            class="cls-5"
+            class="usa-5"
             x="630.73"
             y="49.19"
             width="10.67"
@@ -76,7 +76,7 @@
           />
           <rect
             id="line-14"
-            class="cls-5"
+            class="usa-5"
             x="333.84"
             y="329.19"
             width="5.33"
@@ -84,7 +84,7 @@
           />
           <rect
             id="line-15"
-            class="cls-5"
+            class="usa-5"
             x="851.17"
             y="373.64"
             width="5.33"
@@ -93,7 +93,7 @@
         </g>
         <rect
           id="line-1"
-          class="cls-4"
+          class="usa-4"
           x="88.51"
           y="45.64"
           width="5.33"
@@ -101,7 +101,7 @@
         />
         <rect
           id="line-2"
-          class="cls-4"
+          class="usa-4"
           x="110.73"
           y="21.64"
           width="9.78"
@@ -109,7 +109,7 @@
         />
         <rect
           id="line-3"
-          class="cls-4"
+          class="usa-4"
           x="409.39"
           y="79.41"
           width="11.56"
@@ -117,7 +117,7 @@
         />
         <rect
           id="line-4"
-          class="cls-4"
+          class="usa-4"
           x="229.14"
           y="180.75"
           width="9.59"
@@ -125,7 +125,7 @@
         />
         <rect
           id="line-5"
-          class="cls-4"
+          class="usa-4"
           x="929.39"
           y="27.86"
           width="7.56"
@@ -133,7 +133,7 @@
         />
         <rect
           id="line-6"
-          class="cls-4"
+          class="usa-4"
           x="770.28"
           y="41.19"
           width="10.67"
@@ -141,7 +141,7 @@
         />
         <rect
           id="line-7"
-          class="cls-4"
+          class="usa-4"
           x="799.62"
           y="49.19"
           width="7.11"
@@ -149,7 +149,7 @@
         />
         <rect
           id="line-8"
-          class="cls-4"
+          class="usa-4"
           x="748.95"
           y="293.64"
           width="11.56"

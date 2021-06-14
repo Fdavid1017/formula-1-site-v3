@@ -1,37 +1,37 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016.62 621.64">
     <defs>
-      <style>.cls-1 {
+      <style>.monaco-1 {
         fill: #ce1126;
         }
 
-        .cls-2 {
+        .monaco-2 {
         fill: #fff;
         }
 
-        .cls-3 {
+        .monaco-3 {
         fill: #e6e6e6;
         }
 
-        .cls-4 {
+        .monaco-4 {
         fill: #f2f2f2;
         }
 
-        .cls-5 {
+        .monaco-5 {
         fill: #b2041d;
         }
 
-        .cls-6 {
+        .monaco-6 {
         fill: #ad021b;
         }</style>
     </defs>
     <g id="Layer_2" data-name="Layer 2">
       <g id="Monaco">
-        <rect class="cls-1" width="1016.62" height="621.64" />
-        <polygon class="cls-2" points="1016.62 252.45 0 310.82 0 621.64 1016.62 621.64 1016.62 252.45" />
+        <rect class="monaco-1" width="1016.62" height="621.64" />
+        <polygon class="monaco-2" points="1016.62 252.45 0 310.82 0 621.64 1016.62 621.64 1016.62 252.45" />
         <rect
           id="line-1"
-          class="cls-3"
+          class="monaco-3"
           x="105.48"
           y="50.98"
           width="10.65"
@@ -39,7 +39,7 @@
         />
         <rect
           id="line-2"
-          class="cls-3"
+          class="monaco-3"
           x="131.34"
           y="180.74"
           width="10.65"
@@ -47,7 +47,7 @@
         />
         <rect
           id="line-3"
-          class="cls-3"
+          class="monaco-3"
           x="889.62"
           y="28.63"
           width="5.32"
@@ -55,7 +55,7 @@
         />
         <rect
           id="line-4"
-          class="cls-3"
+          class="monaco-3"
           x="508.62"
           y="18.63"
           width="5.32"
@@ -63,7 +63,7 @@
         />
         <rect
           id="line-5"
-          class="cls-3"
+          class="monaco-3"
           x="472.83"
           y="108.38"
           width="5.32"
@@ -71,7 +71,7 @@
         />
         <rect
           id="line-6"
-          class="cls-4"
+          class="monaco-4"
           x="670.58"
           y="60.18"
           width="11.41"
@@ -80,7 +80,7 @@
         />
         <rect
           id="line-7"
-          class="cls-4"
+          class="monaco-4"
           x="222.65"
           y="9.49"
           width="11.41"
@@ -89,7 +89,7 @@
         />
         <rect
           id="line-8"
-          class="cls-1"
+          class="monaco-1"
           x="929.97"
           y="289.8"
           width="5.7"
@@ -98,7 +98,7 @@
         />
         <rect
           id="line-9"
-          class="cls-1"
+          class="monaco-1"
           x="231.2"
           y="307.08"
           width="5.7"
@@ -107,7 +107,7 @@
         />
         <rect
           id="line-10"
-          class="cls-1"
+          class="monaco-1"
           x="247.32"
           y="211.76"
           width="5.7"
@@ -116,7 +116,7 @@
         />
         <rect
           id="line-11"
-          class="cls-5"
+          class="monaco-5"
           x="588.65"
           y="243.81"
           width="5.7"
@@ -125,7 +125,7 @@
         />
         <rect
           id="line-12"
-          class="cls-6"
+          class="monaco-6"
           x="353.82"
           y="211.76"
           width="11.77"
