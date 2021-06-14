@@ -2,19 +2,19 @@
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016.62 607.6">
     <defs>
       <style>.cls-1 {
-        fill: #fff;
+        fill: #f2f2f2;
         }
 
         .cls-2 {
-        fill: #ed2939;
+        fill: #ed2839;
         }
 
         .cls-3 {
-        fill: #002395;
+        fill: #009247;
         }</style>
     </defs>
     <g id="Layer_2" data-name="Layer 2">
-      <g id="France">
+      <g id="Italy">
         <rect class="cls-1" width="1016.62" height="607.6" />
         <polygon class="cls-2" points="1016.62 607.6 683.99 607.6 619.28 0 1016.62 0 1016.62 607.6" />
         <polygon class="cls-3" points="332.63 607.6 0 607.6 0 0 352.24 0 332.63 607.6" />
@@ -131,15 +131,7 @@
           height="111.55"
         />
         <rect
-          id="line-21"
-          class="cls-1"
-          x="666.27"
-          y="325.21"
-          width="11.15"
-          height="214.99"
-        />
-        <rect
-          id="line-23"
+          id="line-22"
           class="cls-1"
           x="281.93"
           y="29.1"
@@ -147,14 +139,14 @@
           height="343.77"
         />
         <rect
-          id="line-24"
+          id="line-23"
           class="cls-1"
           x="140.97"
           y="265.38"
           width="5.07"
           height="342.21"
         />
-        <rect id="line-25" class="cls-1" x="176.12" width="8.46" height="231.92" />
+        <rect id="line-24" class="cls-1" x="176.12" width="8.46" height="231.92" />
       </g>
     </g>
   </svg>
@@ -162,7 +154,7 @@
 
 <script>
 export default {
-  name: 'FranceFlag'
+  name: 'ItalyFlag'
 }
 </script>
 
@@ -171,7 +163,7 @@ export default {
 
 svg {
   #Layer_2 {
-    #France {
+    #Italy {
       #line-1,
       #line-21,
       #line-22 {
@@ -198,7 +190,8 @@ svg {
       }
 
       #line-6,
-      #line-7 {
+      #line-7,
+      #line-25 {
         animation: bottomToTop 3s infinite linear;
       }
 
@@ -209,6 +202,7 @@ svg {
       }
 
       #line-10,
+      #line-11,
       #line-12,
       #line-13 {
         animation: topToBottom 4s infinite linear;
