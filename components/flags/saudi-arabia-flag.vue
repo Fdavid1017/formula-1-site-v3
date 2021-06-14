@@ -301,7 +301,7 @@
 
 <script>
 export default {
-  name: 'SaudArabiaFlag'
+  name: 'SaudiArabiaFlag'
 }
 </script>
 

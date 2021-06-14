@@ -1,5 +1,5 @@
 <template>
-  <v-container class="card">
+  <div class="card" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
     <div class="card-round">
       Round {{ round }}
     </div>
@@ -27,24 +27,29 @@
       </v-col>
       <v-col />
     </v-row>
-    <div v-if="isSelected">
+    <div v-if="isMouseOver">
       <v-row>
         <v-col id="card-circuit-name">
-          {{ gp_name }}
+          {{ gpName }}
         </v-col>
       </v-row>
       <v-row>
         <v-col class="card-circuit-image">
-          <img :src="require(`static/circuits/minimal_images/${circuit_img_name}`)">
+          <img :src="require(`static/circuits/minimal_images/${circuitImgName}`)">
         </v-col>
       </v-row>
     </div>
     <div v-else class="card-bottom-flag-container">
-      <div class="flag-black-square" />
-      <div class="polygon-triangle" />
-      <img class="flag" :src="require(`static/flags/${country}.svg`)">
+      <v-row>
+        <v-col class="card-circuit-image">
+          <div class="flag-black-square" />
+          <div class="polygon-triangle" />
+          <!--          <img class="flag" :src="require(`static/flags/${country}.svg`)">-->
+          <flag class="flag" :country="country" />
+        </v-col>
+      </v-row>
     </div>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -70,32 +75,19 @@ export default {
       type: String,
       default: 'Hungary'
     },
-    gp_name: {
+    gpName: {
       type: String,
       default: 'Hungarian Grand Prix'
     },
-    circuit_img_name: {
+    circuitImgName: {
       type: String,
       default: 'hungaroring.png'
-    },
-    colorScheme: {
-      type: Object,
-      default () {
-        return {
-
-          primary: '#ce1127',
-          secondary: '#ffffff',
-          tertiary: '#008651'
-        }
-      }
-    },
-    isSelected: {
-      type: Boolean,
-      default: false
     }
   },
   data () {
-    return {}
+    return {
+      isMouseOver: false
+    }
   },
   mounted () {
     fitty('#card-country')
@@ -113,6 +105,12 @@ export default {
         console.error(`No nation found with ${n}`)
         return ''
       }
+    },
+    mouseEnter () {
+      this.isMouseOver = true
+    },
+    mouseLeave () {
+      this.isMouseOver = false
     }
   }
 }
@@ -122,6 +120,7 @@ export default {
 @import "~assets/variables";
 
 .card {
+  cursor: pointer;
   position: relative;
   background-color: $card-bg-color;
   border-radius: 0px 50px 0px 0px;
@@ -139,7 +138,7 @@ export default {
   //-moz-box-shadow: $inner-shadow-vertical-inset $inner-shadow-horizontal-inset 0 $F1-red inset;
 
   $height: 70%;
-  $width: 90%;
+  $width: 22em;
 
   min-height: $height;
   max-height: $height;
@@ -193,11 +192,12 @@ export default {
     }
   }
 
-  .card-circuit-image{
-    padding: 3em;
-    img{
+  .card-circuit-image {
+    padding: 1em;
+
+    img {
       width: 100%;
-      bottom: 3em;
+      bottom: 1em;
     }
   }
 

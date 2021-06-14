@@ -74,7 +74,7 @@ export default {
       } else if (this.country.toLowerCase() === 'russia') {
         countryComponent = 'russia'
       } else if (this.country.toLowerCase() === 'saudi arabia') {
-        countryComponent = 'saudi arabia'
+        countryComponent = 'saudi-arabia'
       } else if (this.country.toLowerCase() === 'singapore') {
         countryComponent = 'singapore'
       } else if (this.country.toLowerCase() === 'spain') {
