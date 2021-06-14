@@ -27,11 +27,22 @@
       </v-col>
       <v-col />
     </v-row>
-    <div class="card-bottom-flag-container">
+    <div v-if="isSelected">
+      <v-row>
+        <v-col id="card-circuit-name">
+          {{ gp_name }}
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="card-circuit-image">
+          <img :src="require(`static/circuits/minimal_images/${circuit_img_name}`)">
+        </v-col>
+      </v-row>
+    </div>
+    <div v-else class="card-bottom-flag-container">
       <div class="flag-black-square" />
       <div class="polygon-triangle" />
       <img class="flag" :src="require(`static/flags/${country}.svg`)">
-      <!--      <australia-flag class="flag"/>-->
     </div>
   </v-container>
 </template>
@@ -65,7 +76,7 @@ export default {
     },
     circuit_img_name: {
       type: String,
-      default: 'image/hungaroring.png'
+      default: 'hungaroring.png'
     },
     colorScheme: {
       type: Object,
@@ -88,6 +99,7 @@ export default {
   },
   mounted () {
     fitty('#card-country')
+    fitty('#card-circuit-name')
   },
   methods: {
     getFlagImgUrl (n) {
@@ -178,6 +190,14 @@ export default {
   .card-flag {
     img {
       max-width: 50%;
+    }
+  }
+
+  .card-circuit-image{
+    padding: 3em;
+    img{
+      width: 100%;
+      bottom: 3em;
     }
   }
 
