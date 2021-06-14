@@ -23,39 +23,40 @@
     <div class="card-divider" />
     <v-row>
       <v-col id="card-country">
-        {{ country }}
+        {{ gpCountry }}
       </v-col>
-      <v-col />
     </v-row>
-    <div v-if="isMouseOver">
-      <v-row>
-        <v-col id="card-circuit-name">
-          {{ gpName }}
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col class="card-circuit-image">
-          <img :src="require(`static/circuits/minimal_images/${circuitImgName}`)">
-        </v-col>
-      </v-row>
-    </div>
-    <div v-else class="card-bottom-flag-container">
-      <v-row>
-        <v-col class="card-circuit-image">
-          <div class="flag-black-square" />
-          <div class="polygon-triangle" />
-          <!--          <img class="flag" :src="require(`static/flags/${country}.svg`)">-->
-          <flag class="flag" :country="country" />
-        </v-col>
-      </v-row>
-    </div>
+    <transition name="left">
+      <div v-if="isMouseOver" class="hover-container">
+        <v-row>
+          <v-col id="card-circuit-name">
+            {{ gpName }}
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="card-circuit-image">
+            <img :src="require(`static/circuits/minimal_images/${circuitImgName}`)">
+          </v-col>
+        </v-row>
+      </div>
+    </transition>
+    <transition name="bottom">
+      <div v-if="!isMouseOver" class="card-bottom-flag-container">
+        <v-row>
+          <v-col class="card-circuit-image">
+            <div class="flag-black-square" />
+            <div class="polygon-triangle" />
+            <flag class="flag" :country="country" />
+          </v-col>
+        </v-row>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
 import nationMap from 'assets/nation-map.json'
 import nationalityMap from 'assets/nationality-map.json'
-import fitty from 'fitty'
 
 export default {
   name: 'GpCard',
@@ -89,9 +90,20 @@ export default {
       isMouseOver: false
     }
   },
+  computed: {
+    gpCountry () {
+      if (this.country === 'UK') {
+        return 'United Kingdom'
+      } else if (this.country === 'USA') {
+        return 'United States'
+      } else if (this.country === 'UAE') {
+        return 'United Arab Emirates'
+      }
+
+      return this.country
+    }
+  },
   mounted () {
-    fitty('#card-country')
-    fitty('#card-circuit-name')
   },
   methods: {
     getFlagImgUrl (n) {
@@ -134,8 +146,14 @@ export default {
   box-shadow: $red-line-padding-left $red-line-padding-bottom 0 $card-bg-color inset,
     ($inner-shadow-vertical-inset + $red-line-width) ($inner-shadow-horizontal-inset - $red-line-width) 0 $card-bg-color inset,
   $inner-shadow-vertical-inset $inner-shadow-horizontal-inset 0 $F1-red inset;
-  //-webkit-box-shadow: $inner-shadow-vertical-inset $inner-shadow-horizontal-inset 0 $F1-red inset;
-  //-moz-box-shadow: $inner-shadow-vertical-inset $inner-shadow-horizontal-inset 0 $F1-red inset;
+
+  -webkit-box-shadow: $red-line-padding-left $red-line-padding-bottom 0 $card-bg-color inset,
+    ($inner-shadow-vertical-inset + $red-line-width) ($inner-shadow-horizontal-inset - $red-line-width) 0 $card-bg-color inset,
+  $inner-shadow-vertical-inset $inner-shadow-horizontal-inset 0 $F1-red inset;
+
+  -moz-box-shadow: $red-line-padding-left $red-line-padding-bottom 0 $card-bg-color inset,
+    ($inner-shadow-vertical-inset + $red-line-width) ($inner-shadow-horizontal-inset - $red-line-width) 0 $card-bg-color inset,
+  $inner-shadow-vertical-inset $inner-shadow-horizontal-inset 0 $F1-red inset;
 
   $height: 70%;
   $width: 22em;
@@ -149,6 +167,26 @@ export default {
   color: white;
   padding-left: 1em;
   padding-right: $inner-shadow-horizontal-inset + 1em;
+
+  transition: box-shadow 0.4s;
+
+  &:hover {
+
+    box-shadow: $red-line-padding-left $red-line-padding-bottom 0 $card-bg-color inset,
+      ($inner-shadow-vertical-inset + $red-line-width) ($inner-shadow-horizontal-inset - $red-line-width) 0 $card-bg-color inset,
+    $inner-shadow-vertical-inset $inner-shadow-horizontal-inset 0 $F1-red inset,
+    5px 5px 25px 0px rgba(0, 0, 0, 1);
+
+    -webkit-box-shadow: $red-line-padding-left $red-line-padding-bottom 0 $card-bg-color inset,
+      ($inner-shadow-vertical-inset + $red-line-width) ($inner-shadow-horizontal-inset - $red-line-width) 0 $card-bg-color inset,
+    $inner-shadow-vertical-inset $inner-shadow-horizontal-inset 0 $F1-red inset,
+    5px 5px 25px 0px rgba(0, 0, 0, 1);
+
+    -moz-box-shadow: $red-line-padding-left $red-line-padding-bottom 0 $card-bg-color inset,
+      ($inner-shadow-vertical-inset + $red-line-width) ($inner-shadow-horizontal-inset - $red-line-width) 0 $card-bg-color inset,
+    $inner-shadow-vertical-inset $inner-shadow-horizontal-inset 0 $F1-red inset,
+    5px 5px 25px 0px rgba(0, 0, 0, 1);
+  }
 
   .card-round {
     color: $F1-red;
@@ -186,6 +224,10 @@ export default {
     margin-bottom: 1.5em;
   }
 
+  #card-country {
+    font-size: 2em;
+  }
+
   .card-flag {
     img {
       max-width: 50%;
@@ -206,6 +248,7 @@ export default {
   .card-bottom-flag-container {
     padding: 0;
     margin: 0;
+    bottom: 0;
 
     .flag-black-square {
       background-color: #2a2a2a;
@@ -217,7 +260,7 @@ export default {
       max-height: $size;
 
       position: absolute;
-      bottom: 2em;
+      bottom: 3.5em;
       left: 7em;
       transform: rotateZ(50deg);
     }
@@ -245,13 +288,53 @@ export default {
       transform: rotateZ(-45deg);
     }
 
-     .flag {
+    .flag {
       width: 95%;
       position: absolute;
       bottom: -3em;
       left: -4em;
       transform: rotateZ(25deg);
     }
+  }
+
+  .hover-container {
+    position: relative;
+    left: 0;
+  }
+
+  .left-enter-active {
+    animation: left-in 0.5s ease-out;
+  }
+
+  .left-leave-active {
+    //transition: left 0.5s;
+    animation: left-in 0.4s ease-in reverse;
+  }
+
+  @keyframes left-in {
+    0% {
+      left: -100%;
+    }
+    75% {
+      left: 2em;
+    }
+    90% {
+      left: -0.5em;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  .bottom-enter-active,
+  .bottom-leave-active {
+    transition: opacity .4s;
+  }
+
+  .bottom-enter,
+  .bottom-leave-to {
+    //transform: translateY(40em);
+    opacity: 0%;
   }
 }
 </style>

@@ -7,29 +7,29 @@
       class="px-5 my-nav-bar d-none d-sm-none d-md-block"
     >
       <div class="nav-bar-item">
-        <nuxt-link to="">
+        <nuxt-link to="/">
           Schedule
         </nuxt-link>
       </div>
       <v-spacer />
       <div class="nav-bar-item">
-        <nuxt-link to="">
+        <nuxt-link to="news">
           News
         </nuxt-link>
       </div>
       <v-spacer />
-      <v-app-bar-nav-icon>
+      <nuxt-link to="/">
         <img class="logo" src="~static/f1-logo.svg">
-      </v-app-bar-nav-icon>
+      </nuxt-link>
       <v-spacer />
       <div class="nav-bar-item">
-        <nuxt-link to="">
+        <nuxt-link to="drivers">
           Drivers
         </nuxt-link>
       </div>
       <v-spacer />
       <div class="nav-bar-item">
-        <nuxt-link to="">
+        <nuxt-link to="teams">
           Teams
         </nuxt-link>
       </div>
