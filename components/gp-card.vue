@@ -307,7 +307,6 @@ export default {
   }
 
   .left-leave-active {
-    //transition: left 0.5s;
     animation: left-in 0.4s ease-in reverse;
   }
 
@@ -333,7 +332,6 @@ export default {
 
   .bottom-enter,
   .bottom-leave-to {
-    //transform: translateY(40em);
     opacity: 0%;
   }
 }

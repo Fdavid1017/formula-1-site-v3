@@ -13,7 +13,7 @@
       </div>
       <v-spacer />
       <div class="nav-bar-item">
-        <nuxt-link to="news">
+        <nuxt-link to="/news">
           News
         </nuxt-link>
       </div>
@@ -23,13 +23,13 @@
       </nuxt-link>
       <v-spacer />
       <div class="nav-bar-item">
-        <nuxt-link to="drivers">
+        <nuxt-link to="/drivers">
           Drivers
         </nuxt-link>
       </div>
       <v-spacer />
       <div class="nav-bar-item">
-        <nuxt-link to="teams">
+        <nuxt-link to="/teams">
           Teams
         </nuxt-link>
       </div>
@@ -56,7 +56,7 @@
         <v-row>
           <v-col>
             <div class="nav-bar-item justify-center d-flex" @click="toggleMobileMenu">
-              <nuxt-link to="">
+              <nuxt-link to="/">
                 Schedule
               </nuxt-link>
             </div>
@@ -66,7 +66,7 @@
         <v-row>
           <v-col>
             <div class="nav-bar-item justify-center d-flex" @click="toggleMobileMenu">
-              <nuxt-link to="">
+              <nuxt-link to="/news">
                 News
               </nuxt-link>
             </div>
@@ -76,7 +76,7 @@
         <v-row>
           <v-col>
             <div class="nav-bar-item justify-center d-flex" @click="toggleMobileMenu">
-              <nuxt-link to="">
+              <nuxt-link to="/drivers">
                 Drivers
               </nuxt-link>
             </div>
@@ -86,7 +86,7 @@
         <v-row>
           <v-col>
             <div class="nav-bar-item justify-center d-flex" @click="toggleMobileMenu">
-              <nuxt-link to="">
+              <nuxt-link to="/teams">
                 Teams
               </nuxt-link>
             </div>
