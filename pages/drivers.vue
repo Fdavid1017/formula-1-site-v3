@@ -13,10 +13,6 @@
             fill: #262626;
             }
 
-            /*.cls-2, .cls-6 {*/
-            /*fill: #8e1b20;*/
-            /*}*/
-
             .cls-3 {
             fill: #626262;
             }
@@ -25,17 +21,9 @@
             fill: #f2f2f2;
             }
 
-            .cls-5 {
-            fill: #102d65;
-            }
-
             .cls-6 {
             font-size: 250px;
             font-weight: 700;
-            }
-
-            .cls-7 {
-            fill: #ceb735;
             }
 
             .cls-8 {
@@ -165,6 +153,8 @@
             points="172.5 216.62 0 462.97 0 450.76 163.13 217.78 172.5 216.62"
           />
           <polygon
+            id="line-1"
+            clip-path="url(#main-background)"
             :fill="driverConstructor.color_scheme.primary"
             points="139.65 220.69 0 420.12 0 407.92 130.28 221.85 139.65 220.69"
           />
@@ -261,6 +251,7 @@
         </v-row>
       </div>
     </v-container>
+
     <div class="control-buttons-container">
       <v-row class="fill-width" align="center" justify="center">
         <v-col>
@@ -338,11 +329,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/scss/drivers-background";
+
 .container {
   width: 100%;
   max-width: 100%;
-  max-height: 100%;
   height: 100%;
+  max-height: 100%;
   padding: 0;
   margin: 0;
   position: relative;
