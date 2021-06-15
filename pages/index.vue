@@ -29,6 +29,8 @@
 
 <script>
 
+import { clamp } from '@/plugins/clamp'
+
 export default {
   components: {},
   data () {
@@ -44,6 +46,7 @@ export default {
     getSchedule () {
       this.$axios.$get('/api/get_schedule').then((response) => {
         this.schedule = response
+        this.firstCardIndex = clamp(this.getClosestUpcomingRaceIndex() - 1, 0, this.schedule.length)
       })
     },
     getCardProps (cardNumber) {
@@ -69,6 +72,20 @@ export default {
     },
     rightClick () {
       this.firstCardIndex = this.firstCardIndex === this.schedule.length - 1 ? 0 : this.firstCardIndex + 1
+    },
+    getClosestUpcomingRaceIndex () {
+      const today = new Date()
+      console.log(this.schedule.length)
+      const afterDates = this.schedule.filter(function (s) {
+        return new Date(s.date_time) - today > 0
+      })
+
+      if (afterDates.length === 0) {
+        console.log('No more upcoming race')
+        return -1
+      }
+
+      return this.schedule.indexOf(afterDates[0])
     }
   }
 }
