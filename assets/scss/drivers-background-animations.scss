@@ -1,0 +1,58 @@
+.move-diagonal-2 {
+  transform-origin: top right;
+  animation: diagonal 2.5s linear infinite;
+}
+
+.move-diagonal-3 {
+  transform-origin: top right;
+  animation: diagonal 3.5s linear infinite;
+}
+
+.move-diagonal-4 {
+  transform-origin: top right;
+  animation: diagonal 4.5s linear infinite;
+}
+
+.move-diagonal-5 {
+  transform-origin: top right;
+  animation: diagonal 5.5s linear infinite;
+}
+
+.move-diagonal-6 {
+  transform-origin: top right;
+  animation: diagonal 6.5s linear infinite;
+}
+
+.move-diagonal-reverse-2 {
+  transform-origin: top right;
+  animation: diagonal reverse 2.5s linear infinite;
+}
+
+.move-diagonal-reverse-3 {
+  transform-origin: top right;
+  animation: diagonal reverse 3.5s linear infinite;
+}
+
+.move-diagonal-reverse-4 {
+  transform-origin: top right;
+  animation: diagonal reverse 4.5s linear infinite;
+}
+
+.move-diagonal-reverse-5 {
+  transform-origin: top right;
+  animation: diagonal reverse 5.5s linear infinite;
+}
+
+.move-diagonal-reverse-6 {
+  transform-origin: top right;
+  animation: diagonal reverse 6.5s linear infinite;
+}
+
+@keyframes diagonal {
+  0% {
+    transform: translateX(-51em) translateY(73.3333315em);
+  }
+  100% {
+    transform: translateX(51em) translateY(-73.3333315em);
+  }
+}
