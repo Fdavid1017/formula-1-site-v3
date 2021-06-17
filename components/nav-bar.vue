@@ -29,8 +29,8 @@
       </div>
       <v-spacer />
       <div class="nav-bar-item">
-        <nuxt-link to="/teams">
-          Teams
+        <nuxt-link to="/constructors">
+          Constructors
         </nuxt-link>
       </div>
     </v-app-bar>
@@ -86,8 +86,8 @@
         <v-row>
           <v-col>
             <div class="nav-bar-item justify-center d-flex" @click="toggleMobileMenu">
-              <nuxt-link to="/teams">
-                Teams
+              <nuxt-link to="/constructors">
+                Constructors
               </nuxt-link>
             </div>
           </v-col>
