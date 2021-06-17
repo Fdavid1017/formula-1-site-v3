@@ -244,6 +244,8 @@
             class="cls-4"
             points="1694.71 430.5 1697.69 433.28 1701.64 436.96 1385.97 775.6 1379.03 769.14 1694.71 430.5"
           />
+
+          <!--   Elements to clip inside team name  -->
           <g class="cls-9">
             <rect
               id="name_white"
@@ -262,6 +264,37 @@
               width="1324.12"
               height="983"
               transform="translate(975 756.28) rotate(-47)"
+            />
+            <polygon
+              id="Rectangle_43"
+              data-name="Rectangle 43"
+              class="move-diagonal-reverse-3"
+              :fill="currentConstructor.color_scheme.primary"
+              points="1194.35 284.92 1196.83 287.23 1199.04 289.29 1053.24 445.69 1048.55 441.31 1194.35 284.92"
+            />
+            <polygon
+              id="Rectangle_48"
+              data-name="Rectangle 48"
+              class="cls-4 move-diagonal-3"
+              points="1077.86 40.42 1081.36 43.68 1083.77 45.92 677.17 482.1 671.26 476.59 1077.86 40.42"
+            />
+            <polygon
+              id="Rectangle_49"
+              data-name="Rectangle 49"
+              class="cls-4 move-diagonal-reverse-2"
+              points="1037.17 110.75 1040.02 113.41 1042.69 115.9 636.09 552.08 630.57 546.93 1037.17 110.75"
+            />
+            <polygon
+              id="Rectangle_50"
+              data-name="Rectangle 50"
+              class="cls-4"
+              points="1067.17 18.66 1069.63 20.95 1073.34 24.41 666.74 460.58 660.57 454.83 1067.17 18.66"
+            />
+            <polygon
+              id="Rectangle_42"
+              data-name="Rectangle 42"
+              :fill="currentConstructor.color_scheme.primary"
+              points="1176.48 284.92 1179.28 287.52 1181.17 289.29 1112.2 363.27 1107.52 358.9 1176.48 284.92"
             />
           </g>
         </g>
