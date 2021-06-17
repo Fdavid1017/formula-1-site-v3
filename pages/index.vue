@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     getSchedule () {
-      this.$axios.$get('/api/get_schedule').then((response) => {
+      this.$axios.$get('/api/schedules').then((response) => {
         this.schedule = response
         this.firstCardIndex = clamp(this.getClosestUpcomingRaceIndex() - 1, 0, this.schedule.length)
       })
