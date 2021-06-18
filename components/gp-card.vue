@@ -1,5 +1,5 @@
 <template>
-  <div class="card" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
+  <div class="card" @click="goToResult" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
     <div class="card-round">
       Round {{ round }}
     </div>
@@ -123,6 +123,9 @@ export default {
     },
     mouseLeave () {
       this.isMouseOver = false
+    },
+    goToResult () {
+      this.$router.push(`/result/${this.round}`)
     }
   }
 }

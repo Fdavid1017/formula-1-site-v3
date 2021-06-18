@@ -248,7 +248,7 @@
           <!--   Elements to clip inside team name  -->
           <g class="cls-9">
             <rect
-              id="name_white"
+              id="name_primary"
               :fill="currentConstructor.color_scheme.primary"
               x="-143.69"
               y="-70.57"
@@ -257,7 +257,7 @@
               transform="translate(-100 1121.74) rotate(-47.01)"
             />
             <rect
-              id="name_primary"
+              id="name_white"
               class="cls-4"
               x="-634.04"
               y="-315.09"

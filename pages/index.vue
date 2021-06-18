@@ -75,7 +75,7 @@ export default {
     },
     getClosestUpcomingRaceIndex () {
       const today = new Date()
-      console.log(this.schedule.length)
+
       const afterDates = this.schedule.filter(function (s) {
         return new Date(s.date_time) - today > 0
       })
