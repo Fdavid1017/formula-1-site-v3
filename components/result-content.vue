@@ -160,8 +160,8 @@
               </v-row>
             </div>
           </v-tab-item>
-          <v-tab-item>
-            {{ circuit }}
+          <v-tab-item class="fill-width fill-height">
+            <circuit-infos :circuit="circuit" />
           </v-tab-item>
         </v-tabs-items>
       </v-container>
