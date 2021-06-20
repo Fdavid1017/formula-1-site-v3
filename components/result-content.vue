@@ -116,10 +116,9 @@
             </div>
           </v-tab-item>
           <v-tab-item>
-            <result-tab
+            <qualifying-result-tab
               v-if="qualifying"
               :session-result="qualifying"
-              :is-practice="true"
               :session-date="weekendSchedule.qualifying"
             />
             <div v-else class="upcoming-race fill-width fill-height">
@@ -315,7 +314,6 @@ export default {
   background-color: #393948;
 
   .container {
-    max-width: 75%;
 
     .v-tabs-items {
       background-color: transparent !important;

@@ -5,23 +5,28 @@
       <v-col>
         <v-row class="fill-width">
           <v-col class="d-flex justify-center">
-            <info-panel title="First GP" :data="circuit.first_gp" />
-          </v-col>
-          <v-col class="d-flex justify-center">
-            <info-panel title="Number of laps" :data="circuit.number_of_laps" />
+            <info-panel title="" :data="circuit.name" />
           </v-col>
         </v-row>
         <v-row class="fill-width">
           <v-col class="d-flex justify-center">
-            <info-panel title="Circuit length" :data="circuit.length" unit="km" />
+            <info-panel title="First GP" :data="circuit.first_gp.toString()" />
           </v-col>
           <v-col class="d-flex justify-center">
-            <info-panel title="Race distance" :data="circuit.race_distance" unit="km" />
+            <info-panel title="Number of laps" :data="circuit.number_of_laps.toString()" />
           </v-col>
         </v-row>
         <v-row class="fill-width">
           <v-col class="d-flex justify-center">
-            gjson
+            <info-panel title="Circuit length" :data="circuit.length.toString()" unit="km" />
+          </v-col>
+          <v-col class="d-flex justify-center">
+            <info-panel title="Race distance" :data="circuit.race_distance.toString()" unit="km" />
+          </v-col>
+        </v-row>
+        <v-row class="fill-width">
+          <v-col class="d-flex justify-center">
+            <geo-map :geo-json-name="circuit.gjson_map" />
           </v-col>
         </v-row>
       </v-col>

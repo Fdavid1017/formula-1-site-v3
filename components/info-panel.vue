@@ -8,7 +8,9 @@
     <v-row>
       <v-col id="data">
         <v-row>
-          <v-col class="d-flex align-end">{{ data }}</v-col>
+          <v-col class="d-flex align-end">
+            {{ data }}
+          </v-col>
           <v-col v-if="unit" class="unit d-flex align-end">
             {{ unit }}
           </v-col>
@@ -40,14 +42,17 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  -webkit-box-shadow: 5px -5px 0px 0px $F1-red;
-  box-shadow: 5px -5px 0px 0px $F1-red;
+  -webkit-box-shadow: 5px -5px 0px 0px $F1-red,
+  -2px 2px 15px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px -5px 0px 0px $F1-red,
+  -2px 2px 15px 0px rgba(0, 0, 0, 0.5);
 
   -webkit-border-radius: 0px 15px 0px 0px;
   -moz-border-radius: 0px 15px 0px 0px;
   border-radius: 0px 15px 0px 0px;
 
   font-family: "Formula1 Bold";
+  padding-left: 1.25em;
 
   #title {
     color: #A0A0A0;

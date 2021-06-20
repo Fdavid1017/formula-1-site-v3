@@ -217,12 +217,12 @@ export default {
     const practice3 = await fetch(`http://localhost:5000/api/practices/${circuit.country}/3`).then(res => res.json())
     const weekendSchedule = await fetch(`http://localhost:5000/api/weekendSchedules/${this.round}`).then(res => res.json())
 
-    console.log(practice1)
-    console.log(practice2)
-    console.log(practice3)
-    console.log(qualifying)
-    console.log(race)
-    console.log(weekendSchedule)
+    // console.log(practice1)
+    // console.log(practice2)
+    // console.log(practice3)
+    // console.log(qualifying)
+    // console.log(race)
+    // console.log(weekendSchedule)
 
     if (!race.error) {
       this.race = race
