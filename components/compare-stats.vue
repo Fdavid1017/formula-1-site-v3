@@ -58,8 +58,44 @@
         Stepped
       </v-col>
     </v-row>
+    <v-row class="fill-width">
+      <v-col class="d-flex justify-center">
+        <div class="btn" @click="showAllDriver()">
+          Show all
+        </div>
+      </v-col>
+      <v-col class="d-flex justify-center">
+        <div class="btn" @click="hideAllDriver()">
+          Hide all
+        </div>
+      </v-col>
+    </v-row>
     <client-only>
-      <line-chart :chart-data="chartData" :options="chartOptions" />
+      <v-row>
+        <v-col cols="1">
+          <v-row
+            v-for="(item,index) in drivers"
+            :key="index"
+            :class="{'drivers-row-primary':index%2===0,'drivers-row-secondary':index%2===1}"
+            @click="driversClick(item.code)"
+          >
+            <v-col cols="1">
+              <div class="driver-divider-line" :style="`background-color: ${item.constructor.color_scheme.primary}`" />
+            </v-col>
+            <v-col>
+              <div v-if="driversToExclude.includes(item.code)" class="line-through" />
+              <div>
+                {{
+                  item.code
+                }}
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col cols="11">
+          <line-chart :chart-data="chartData" :options="chartOptions" />
+        </v-col>
+      </v-row>
       <v-row class="fill-width">
         <v-col cols="2" class="d-flex justify-end">
           Laps:
@@ -125,9 +161,8 @@ export default {
       chartOptions: {
         responsive: true,
         legend: {
+          display: false,
           position: 'left',
-          // onHover: this.handleHover,
-          // onLeave: this.handleLeave,
           labels: {
             fontColor: 'white',
             fontFamily: 'Formula1 Bold'
@@ -141,7 +176,8 @@ export default {
 
       // Others
       lapsData: [],
-      drivers: []
+      drivers: [],
+      driversToExclude: []
     }
   },
   async fetch () {
@@ -151,6 +187,7 @@ export default {
     this.lapsData = this.convertLapData(laps)
     this.drivers = drivers
     this.chartData = this.getChartData(true)
+
     // const miliseconds = 144310
     // console.log(msToTime(miliseconds))
   },
@@ -169,23 +206,31 @@ export default {
     },
     chartLinesStepped (val) {
       this.chartData = this.getChartData()
+    },
+    driversToExclude (val) {
+      this.chartData = this.getChartData()
     }
   },
   methods: {
     getDriver (driverCode) {
       return this.drivers.filter(d => d.code === driverCode)[0]
     },
-    handleHover (e, legendItem) {
-      legendItem.chart.data.datasets[0].backgroundColor.forEach((color, index, colors) => {
-        colors[index] = index === legendItem.datasetIndex || color.length === 9 ? color : color + '4D'
-      })
-      legendItem.chart.update()
+    driversClick (driverCode) {
+      const indexOfItem = this.driversToExclude.indexOf(driverCode)
+
+      if (indexOfItem > -1) {
+        this.driversToExclude.splice(indexOfItem, 1)
+      } else {
+        this.driversToExclude.push(driverCode)
+      }
     },
-    handleLeave (e, legendItem) {
-      legendItem.chart.data.datasets[0].backgroundColor.forEach((color, index, colors) => {
-        colors[index] = color.length === 9 ? color.slice(0, -2) : color
-      })
-      legendItem.chart.update()
+    showAllDriver () {
+      this.driversToExclude = []
+    },
+    hideAllDriver () {
+      for (const driversKey in this.drivers) {
+        this.driversToExclude.push(this.drivers[driversKey].code)
+      }
     },
     convertLapData (laps) {
       const temp = []
@@ -235,6 +280,10 @@ export default {
       let highestLapNumber = 0
 
       for (const driverCode in grouped) {
+        if (this.driversToExclude.includes(driverCode)) {
+          continue
+        }
+
         const row = grouped[driverCode]
         const driver = this.getDriver(driverCode)
         const constructor = driver.constructor
@@ -307,5 +356,53 @@ export default {
   font-family: "Formula1 Bold";
   color: white;
 
+  .driver-divider-line {
+    height: 100%;
+    width: 0.5em;
+  }
+
+  .drivers-row-primary,
+  .drivers-row-secondary {
+    cursor: pointer;
+    position: relative;
+
+    .line-through {
+      position: absolute;
+      background-color: #cbcbcb;
+      width: 50%;
+      height: 8%;
+      top: 45%;
+      left: 25%;
+    }
+  }
+
+  .drivers-row-primary {
+    background-color: #323242;
+  }
+
+  .drivers-row-secondary {
+    background-color: #4D4D62;
+  }
+
+  .btn {
+    margin: 0;
+    padding: 0.25em 0.75em 0.25em 0.25em;
+    height: 100%;
+    display: inline-block;
+    background-color: $F1-red;
+    cursor: pointer;
+    font-size: 1.25em;
+
+    border-radius: 0px 15px 0px 0px;
+    -webkit-border-radius: 0px 15px 0px 0px;
+    -moz-border-radius: 0px 15px 0px 0px;
+
+    transition: all 0.2s;
+
+    &:hover {
+      font-size: 1.15em !important;
+      color: #a0a0a0;
+    }
+  }
 }
 </style>
