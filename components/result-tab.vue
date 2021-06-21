@@ -7,7 +7,7 @@
         </div>
       </v-col>
       <v-col class="text-uppercase align-center">
-        <div class="btn">
+        <div class="btn" @click="$emit('compareClick')">
           compare
         </div>
       </v-col>

@@ -59,6 +59,7 @@ export default {
     // console.log(practice3)
     // console.log(qualifying)
     // console.log(race)
+    // console.log(circuit)
     // console.log(weekendSchedule)
 
     if (!race.error) {
