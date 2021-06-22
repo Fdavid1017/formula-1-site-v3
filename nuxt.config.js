@@ -36,7 +36,11 @@ export default {
       mode: 'client'
     },
     '~/plugins/lodash.js',
-    '~/plugins/moment-format.js'
+    '~/plugins/moment-format.js',
+    {
+      src: '~/plugins/vue-apexchart.js',
+      ssr: false
+    }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

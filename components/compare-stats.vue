@@ -70,57 +70,19 @@
         </div>
       </v-col>
     </v-row>
-    <client-only>
-      <v-row>
-        <v-col cols="1">
-          <v-row
-            v-for="(item,index) in drivers"
-            :key="index"
-            :class="{'drivers-row-primary':index%2===0,'drivers-row-secondary':index%2===1}"
-            @click="driversClick(item.code)"
-          >
-            <v-col cols="1">
-              <div class="driver-divider-line" :style="`background-color: ${item.constructor.color_scheme.primary}`" />
-            </v-col>
-            <v-col>
-              <div v-if="driversToExclude.includes(item.code)" class="line-through" />
-              <div>
-                {{
-                  item.code
-                }}
-              </div>
-            </v-col>
-          </v-row>
-        </v-col>
-        <v-col cols="11">
-          <line-chart :chart-data="chartData" :options="chartOptions" />
-        </v-col>
-      </v-row>
-      <v-row class="fill-width">
-        <v-col cols="2" class="d-flex justify-end">
-          Laps:
-        </v-col>
-        <v-col>
-          <v-range-slider
-            v-model="lapRange"
-            hide-details
-            :min="lapRangeMin"
-            :max="lapRangeMax"
-          >
-            <template #thumb-label="props">
-              {{ props.value }}
-            </template>
-          </v-range-slider>
-        </v-col>
-      </v-row>
-    </client-only>
+    <div>
+      <apexchart width="100%" type="line" :options="options" :series="series" />
+    </div>
   </v-container>
 </template>
 
 <script>
+import apexchart from 'vue-apexcharts'
+import { msToTimeString } from '@/plugins/msToTime'
 
 export default {
   name: 'CompareStats',
+  components: { apexchart },
   props: {
     gpName: {
       type: String,
@@ -153,42 +115,54 @@ export default {
       selectSpeedTrap: 'Finish Line',
 
       // Chart
-      chartLinesStepped: false,
-
-      chartData: {
-        datasets: []
-      },
-      chartOptions: {
-        responsive: true,
-        legend: {
-          display: false,
-          position: 'left',
+      options: {
+        chart: {
+          id: 'results'
+        },
+        xaxis: {
+          categories: [],
           labels: {
-            fontColor: 'white',
-            fontFamily: 'Formula1 Bold'
+            formatter (value, timestamp) {
+              return 'Lap: ' + value
+            }
           }
+        },
+        yaxis: {
+          show: true,
+          labels: {
+            formatter (value, timestamp) {
+              // The formatter function overrides format property
+              // const duration = msToTime(value)
+              // return `${duration.hours}:${duration.mins}:${duration.secs}.${duration.ms}`
+              return msToTimeString(value)
+            }
+          }
+        },
+        noData: {
+          text: 'Loading...'
+        },
+        legend: {
+          show: true,
+          position: 'left',
+          fontFamily: 'Formula1 Bold',
+          labels: {
+            useSeriesColors: true
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'smooth'
         }
-        // scales: {
-        //   yAxes: [{
-        //     type: 'time',
-        //     time: {
-        //       unit: 'minutes',
-        //       parser: 'hh:mm:ss.SS',
-        //       displayFormats: {
-        //         day: 'hh:mm:ss.SS'
-        //       }
-        //     },
-        //     ticks: {
-        //       source: 'labels'
-        //     }
-        //   }]
-        // }
       },
+      series: [],
 
       // Others
       lapsData: [],
       drivers: [],
-      driversToExclude: []
+      driversToExclude: [],
+      chartLinesStepped: false
     }
   },
   async fetch () {
@@ -197,43 +171,34 @@ export default {
 
     this.lapsData = this.convertLapData(laps)
     this.drivers = drivers
-    this.chartData = this.getChartData(true)
-
-    // const miliseconds = 144310
-    // console.log(msToTime(miliseconds))
+    this.setChartData()
   },
   watch: {
     selectType (val) {
-      this.chartData = this.getChartData()
+      this.setChartData()
     },
     selectSector (val) {
-      this.chartData = this.getChartData()
+      this.setChartData()
     },
     selectSpeedTrap (val) {
-      this.chartData = this.getChartData()
+      this.setChartData()
     },
     lapRange (val) {
-      this.chartData = this.getChartData()
+      this.setChartData()
     },
     chartLinesStepped (val) {
-      this.chartData = this.getChartData()
-    },
-    driversToExclude (val) {
-      this.chartData = this.getChartData()
+      console.log(val ? 'stepline' : 'smooth')
+
+      const op = this.options
+
+      op.stroke.curve = val ? 'stepline' : 'smooth'
+
+      this.options = op
     }
   },
   methods: {
     getDriver (driverCode) {
       return this.drivers.filter(d => d.code === driverCode)[0]
-    },
-    driversClick (driverCode) {
-      const indexOfItem = this.driversToExclude.indexOf(driverCode)
-
-      if (indexOfItem > -1) {
-        this.driversToExclude.splice(indexOfItem, 1)
-      } else {
-        this.driversToExclude.push(driverCode)
-      }
     },
     showAllDriver () {
       this.driversToExclude = []
@@ -250,15 +215,15 @@ export default {
           const o = {
             Time: laps.Time[i.toString()],
             DriverNumber: laps.DriverNumber[i.toString()],
-            LapTime: this.$moment.duration(laps.LapTime[i.toString()]),
+            LapTime: laps.LapTime[i.toString()],
             LapNumber: laps.LapNumber[i.toString()],
-            Sector1Time: this.$moment.duration(laps.Sector1Time[i.toString()]),
-            Sector2Time: this.$moment.duration(laps.Sector2Time[i.toString()]),
-            Sector3Time: this.$moment.duration(laps.Sector3Time[i.toString()]),
-            SpeedI1: this.$moment.duration(laps.SpeedI1[i.toString()]),
-            SpeedI2: this.$moment.duration(laps.SpeedI2[i.toString()]),
-            SpeedFL: this.$moment.duration(laps.SpeedFL[i.toString()]),
-            SpeedST: this.$moment.duration(laps.SpeedST[i.toString()]),
+            Sector1Time: laps.Sector1Time[i.toString()],
+            Sector2Time: laps.Sector2Time[i.toString()],
+            Sector3Time: laps.Sector3Time[i.toString()],
+            SpeedI1: laps.SpeedI1[i.toString()],
+            SpeedI2: laps.SpeedI2[i.toString()],
+            SpeedFL: laps.SpeedFL[i.toString()],
+            SpeedST: laps.SpeedST[i.toString()],
             Compound: laps.Compound[i.toString()],
             TyreLife: laps.TyreLife[i.toString()],
             Team: laps.Team[i.toString()],
@@ -273,39 +238,24 @@ export default {
       const grouped = this._.groupBy(temp, 'Driver')
       return grouped
     },
-    getChartData (resetRange = false) {
+    setChartData () {
       if (!this.lapsData) {
-        return {
-          datasets: []
-        }
-      }
-
-      const data = {
-        labels: [],
-        datasets: []
+        return {}
       }
 
       const grouped = this.lapsData
-      const constructorsContained = []
+      const series = []
+      const newColors = []
       let highestLapNumber = 0
 
       for (const driverCode in grouped) {
-        if (this.driversToExclude.includes(driverCode)) {
-          continue
-        }
-
         const row = grouped[driverCode]
-        const driver = this.getDriver(driverCode)
-        const constructor = driver.constructor
 
-        const dataSet = {
-          label: driverCode,
-          data: [],
-          borderColor: constructor.color_scheme.primary,
-          fill: false,
-          backgroundColor: constructor.color_scheme.primary,
-          borderDash: constructorsContained.includes(constructor.constructor_id) ? [5, 5] : [],
-          steppedLine: this.chartLinesStepped ? 'after' : false
+        newColors.push(this.getDriver(driverCode).constructor.color_scheme.primary)
+
+        const seriesItem = {
+          name: driverCode,
+          data: []
         }
 
         for (const rowIndex in row) {
@@ -315,45 +265,38 @@ export default {
             highestLapNumber = rowItem.LapNumber
           }
 
-          if (rowItem.LapNumber >= this.lapRange[0] && rowItem.LapNumber <= this.lapRange[1]) {
-            if (this.selectType === 'Lap Time') {
-              dataSet.data.push(rowItem.LapTime)
-            } else if (this.selectType === 'Sector') {
-              if (this.selectSector === 'Sector 1') {
-                dataSet.data.push(rowItem.Sector1Time)
-              } else if (this.selectSector === 'Sector 2') {
-                dataSet.data.push(rowItem.Sector2Time)
-              } else if (this.selectSector === 'Sector 3') {
-                dataSet.data.push(rowItem.Sector3Time)
-              }
-            } else if (this.selectType === 'Speed Trap') {
-              if (this.selectSector === 'Sector 1 Speed Trap') {
-                dataSet.data.push(rowItem.SpeedI1)
-              } else if (this.selectSpeedTrap === 'Sector 2 Speed Trap') {
-                dataSet.data.push(rowItem.SpeedI2)
-              } else if (this.selectSpeedTrap === 'Finish Line') {
-                dataSet.data.push(rowItem.SpeedFL)
-              } else if (this.selectSpeedTrap === 'Longest Straight Speed Trap') {
-                dataSet.data.push(rowItem.SpeedST)
-              }
+          if (this.selectType === 'Lap Time') {
+            seriesItem.data.push(rowItem.LapTime)
+          } else if (this.selectType === 'Sector') {
+            if (this.selectSector === 'Sector 1') {
+              seriesItem.data.push(rowItem.Sector1Time)
+            } else if (this.selectSector === 'Sector 2') {
+              seriesItem.data.push(rowItem.Sector2Time)
+            } else if (this.selectSector === 'Sector 3') {
+              seriesItem.data.push(rowItem.Sector3Time)
+            }
+          } else if (this.selectType === 'Speed Trap') {
+            if (this.selectSector === 'Sector 1 Speed Trap') {
+              seriesItem.data.push(rowItem.SpeedI1)
+            } else if (this.selectSpeedTrap === 'Sector 2 Speed Trap') {
+              seriesItem.data.push(rowItem.SpeedI2)
+            } else if (this.selectSpeedTrap === 'Finish Line') {
+              seriesItem.data.push(rowItem.SpeedFL)
+            } else if (this.selectSpeedTrap === 'Longest Straight Speed Trap') {
+              seriesItem.data.push(rowItem.SpeedST)
             }
           }
         }
 
-        constructorsContained.push(constructor.constructor_id)
-        data.datasets.push(dataSet)
+        series.push(seriesItem)
       }
 
-      if (resetRange) {
-        this.lapRange = [1, highestLapNumber]
-      }
+      // eslint-disable-next-line no-undef
+      ApexCharts.exec('results', 'updateOptions', {
+        colors: newColors
+      }, false, true)
 
-      for (let i = this.lapRange[0]; i <= highestLapNumber && i <= this.lapRange[1]; i++) {
-        data.labels.push(i)
-      }
-      this.lapRangeMax = highestLapNumber
-
-      return data
+      this.series = series
     }
   }
 }
@@ -364,7 +307,7 @@ export default {
   max-width: 100%;
   width: 100%;
   font-family: "Formula1 Bold";
-  color: white;
+  //color: white;
 
   .driver-divider-line {
     height: 100%;
