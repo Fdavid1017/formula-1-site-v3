@@ -35,7 +35,8 @@ export default {
       src: '~/plugins/vue-chart.js',
       mode: 'client'
     },
-    '~/plugins/lodash.js'
+    '~/plugins/lodash.js',
+    '~/plugins/moment-format.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,7 +53,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/moment'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

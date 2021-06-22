@@ -167,11 +167,22 @@ export default {
             fontColor: 'white',
             fontFamily: 'Formula1 Bold'
           }
-        },
-        interaction: {
-          intersect: false,
-          axis: 'y'
         }
+        // scales: {
+        //   yAxes: [{
+        //     type: 'time',
+        //     time: {
+        //       unit: 'minutes',
+        //       parser: 'hh:mm:ss.SS',
+        //       displayFormats: {
+        //         day: 'hh:mm:ss.SS'
+        //       }
+        //     },
+        //     ticks: {
+        //       source: 'labels'
+        //     }
+        //   }]
+        // }
       },
 
       // Others
@@ -235,26 +246,25 @@ export default {
     convertLapData (laps) {
       const temp = []
       for (let i = 0; i < Object.keys(laps.Time).length; i++) {
-        if (laps.Driver[i.toString()] !== null) {
+        if (laps.Driver[i.toString()] !== null && laps.LapTime[i.toString()] != null) {
           const o = {
             Time: laps.Time[i.toString()],
             DriverNumber: laps.DriverNumber[i.toString()],
-            LapTime: laps.LapTime[i.toString()],
+            LapTime: this.$moment.duration(laps.LapTime[i.toString()]),
             LapNumber: laps.LapNumber[i.toString()],
-            Sector1Time: laps.Sector1Time[i.toString()],
-            Sector2Time: laps.Sector2Time[i.toString()],
-            Sector3Time: laps.Sector3Time[i.toString()],
-            SpeedI1: laps.SpeedI1[i.toString()],
-            SpeedI2: laps.SpeedI2[i.toString()],
-            SpeedFL: laps.SpeedFL[i.toString()],
-            SpeedST: laps.SpeedST[i.toString()],
+            Sector1Time: this.$moment.duration(laps.Sector1Time[i.toString()]),
+            Sector2Time: this.$moment.duration(laps.Sector2Time[i.toString()]),
+            Sector3Time: this.$moment.duration(laps.Sector3Time[i.toString()]),
+            SpeedI1: this.$moment.duration(laps.SpeedI1[i.toString()]),
+            SpeedI2: this.$moment.duration(laps.SpeedI2[i.toString()]),
+            SpeedFL: this.$moment.duration(laps.SpeedFL[i.toString()]),
+            SpeedST: this.$moment.duration(laps.SpeedST[i.toString()]),
             Compound: laps.Compound[i.toString()],
             TyreLife: laps.TyreLife[i.toString()],
             Team: laps.Team[i.toString()],
             Driver: laps.Driver[i.toString()],
             TrackStatus: laps.TrackStatus[i.toString()]
           }
-
           temp.push(o)
         }
       }

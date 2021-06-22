@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import RaceBanner from '@/pages/result/RaceBanner'
+import RaceBanner from '@/components/RaceBanner'
 
 export default {
   name: 'Id',
