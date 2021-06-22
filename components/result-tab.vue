@@ -7,8 +7,13 @@
         </div>
       </v-col>
       <v-col class="text-uppercase align-center">
-        <div class="btn" @click="$emit('compareClick')">
-          compare
+        <div class="btn" @click="compareClick('timings')">
+          compare timings
+        </div>
+      </v-col>
+      <v-col class="text-uppercase align-center">
+        <div class="btn" @click="compareClick('carData')">
+          compare car data
         </div>
       </v-col>
       <v-col class="d-flex justify-end align-center session-date">
@@ -105,7 +110,11 @@ export default {
       return date.toLocaleDateString('en-us', options)
     }
   },
-  methods: {}
+  methods: {
+    compareClick (value) {
+      this.$emit('compareClick', value)
+    }
+  }
 }
 </script>
 

@@ -46,9 +46,20 @@
               :session-result="practice1"
               :is-practice="true"
               :session-date="weekendSchedule.fp1"
-              @compareClick="compare=true"
+              @compareClick="onCompareClick"
             />
-            <compare-stats v-else-if="compare" :gp-name="circuit.country" session-type="FP1"/>
+            <compare-stats
+              v-else-if="compare==='timings'"
+              :gp-name="circuit.country"
+              session-type="FP1"
+              @compareClick="onCompareClick"
+            />
+            <compare-car-data
+              v-else-if="compare==='carData'"
+              :gp-name="circuit.country"
+              session-type="FP1"
+              @compareClick="onCompareClick"
+            />
             <div v-else class="upcoming-race fill-width fill-height">
               <v-row class="fill-width">
                 <v-col class="fill-width d-flex justify-center">
@@ -73,9 +84,20 @@
               :session-result="practice2"
               :is-practice="true"
               :session-date="weekendSchedule.fp2"
-              @compareClick="compare=true"
+              @compareClick="onCompareClick"
             />
-            <compare-stats v-else-if="compare" :gp-name="circuit.country" session-type="FP2"/>
+            <compare-stats
+              v-else-if="compare==='timings'"
+              :gp-name="circuit.country"
+              session-type="FP2"
+              @compareClick="onCompareClick"
+            />
+            <compare-car-data
+              v-else-if="compare==='carData'"
+              :gp-name="circuit.country"
+              session-type="FP2"
+              @compareClick="onCompareClick"
+            />
             <div v-else class="upcoming-race fill-width fill-height">
               <v-row class="fill-width">
                 <v-col class="fill-width d-flex justify-center">
@@ -100,9 +122,20 @@
               :session-result="practice3"
               :is-practice="true"
               :session-date="weekendSchedule.fp3"
-              @compareClick="compare=true"
+              @compareClick="onCompareClick"
             />
-            <compare-stats v-else-if="compare" :gp-name="circuit.country" session-type="FP3"/>
+            <compare-stats
+              v-else-if="compare==='timings'"
+              :gp-name="circuit.country"
+              session-type="FP3"
+              @compareClick="onCompareClick"
+            />
+            <compare-car-data
+              v-else-if="compare==='carData'"
+              :gp-name="circuit.country"
+              session-type="FP3"
+              @compareClick="onCompareClick"
+            />
             <div v-else class="upcoming-race fill-width fill-height">
               <v-row class="fill-width">
                 <v-col class="fill-width d-flex justify-center">
@@ -126,9 +159,20 @@
               v-if="qualifying && !compare"
               :session-result="qualifying"
               :session-date="weekendSchedule.qualifying"
-              @compareClick="compare=true"
+              @compareClick="onCompareClick"
             />
-            <compare-stats v-else-if="compare" :gp-name="circuit.country" session-type="Q"/>
+            <compare-stats
+              v-else-if="compare==='timings'"
+              :gp-name="circuit.country"
+              session-type="Q"
+              @compareClick="onCompareClick"
+            />
+            <compare-car-data
+              v-else-if="compare==='carData'"
+              :gp-name="circuit.country"
+              session-type="Q"
+              @compareClick="onCompareClick"
+            />
             <div v-else class="upcoming-race fill-width fill-height">
               <v-row class="fill-width">
                 <v-col class="fill-width d-flex justify-center">
@@ -149,12 +193,23 @@
           </v-tab-item>
           <v-tab-item>
             <result-tab
-              v-if="race && !compare"
+              v-if="race && compare===''"
               :session-result="race"
               :session-date="weekendSchedule.race"
-              @compareClick="compare=true"
+              @compareClick="onCompareClick"
             />
-            <compare-stats v-else-if="compare" :gp-name="circuit.country" session-type="R"/>
+            <compare-stats
+              v-else-if="compare==='timings'"
+              :gp-name="circuit.country"
+              session-type="R"
+              @compareClick="onCompareClick"
+            />
+            <compare-car-data
+              v-else-if="compare==='carData'"
+              :gp-name="circuit.country"
+              session-type="R"
+              @compareClick="onCompareClick"
+            />
             <div v-else class="upcoming-race fill-width fill-height">
               <v-row class="fill-width">
                 <v-col class="fill-width d-flex justify-center">
@@ -232,10 +287,13 @@ export default {
   data () {
     return {
       tabIndex: 0,
-      compare: false
+      compare: ''
     }
   },
   methods: {
+    onCompareClick (value) {
+      this.compare = value
+    },
     sessionTimeString (sessionTime, isPractice = false) {
       const date = new Date(sessionTime)
 

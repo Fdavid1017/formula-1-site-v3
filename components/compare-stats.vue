@@ -2,6 +2,11 @@
   <v-container>
     <v-row class="fill-width">
       <v-col class="d-flex justify-end align-center">
+        <div class="btn" @click="$emit('compareClick','')">
+          Back
+        </div>
+      </v-col>
+      <v-col class="d-flex justify-end align-center">
         Compare
       </v-col>
       <v-col class="d-flex align-center">
@@ -95,11 +100,6 @@ export default {
   },
   data () {
     return {
-      // Lap range slider
-      lapRange: [1, 2],
-      lapRangeMin: 1,
-      lapRangeMax: 2,
-
       // Select
       selectTypeItems: [
         'Lap Time', 'Sector', 'Speed Trap'
@@ -158,7 +158,6 @@ export default {
       // Others
       lapsData: [],
       drivers: [],
-      driversToExclude: [],
       chartLinesStepped: false
     }
   },
@@ -196,9 +195,6 @@ export default {
       this.setChartData()
     },
     selectSpeedTrap (val) {
-      this.setChartData()
-    },
-    lapRange (val) {
       this.setChartData()
     },
     chartLinesStepped (val) {
@@ -345,6 +341,27 @@ export default {
   width: 100%;
   font-family: "Formula1 Bold";
   color: white;
+
+  .btn {
+    margin: 0;
+    padding: 0.25em 0.75em 0.25em 0.25em;
+    height: 100%;
+    display: inline-block;
+    background-color: $F1-red;
+    cursor: pointer;
+    font-size: 1.25em;
+
+    border-radius: 0px 15px 0px 0px;
+    -webkit-border-radius: 0px 15px 0px 0px;
+    -moz-border-radius: 0px 15px 0px 0px;
+
+    transition: all 0.2s;
+
+    &:hover {
+      font-size: 1.15em !important;
+      color: #a0a0a0;
+    }
+  }
 
   .chart-container {
     color: #3a3947;
