@@ -70,7 +70,7 @@
         </div>
       </v-col>
     </v-row>
-    <div>
+    <div class="chart-container">
       <apexchart width="100%" type="line" :options="options" :series="series" />
     </div>
   </v-container>
@@ -120,7 +120,6 @@ export default {
           id: 'results'
         },
         xaxis: {
-          categories: [],
           labels: {
             formatter (value, timestamp) {
               return 'Lap: ' + value
@@ -131,9 +130,6 @@ export default {
           show: true,
           labels: {
             formatter (value, timestamp) {
-              // The formatter function overrides format property
-              // const duration = msToTime(value)
-              // return `${duration.hours}:${duration.mins}:${duration.secs}.${duration.ms}`
               return msToTimeString(value)
             }
           }
@@ -153,7 +149,8 @@ export default {
           enabled: false
         },
         stroke: {
-          curve: 'smooth'
+          curve: 'smooth',
+          dashArray: []
         }
       },
       series: [],
@@ -175,6 +172,24 @@ export default {
   },
   watch: {
     selectType (val) {
+      if (val === 'Speed Trap') {
+        // eslint-disable-next-line no-undef
+        ApexCharts.exec('results', 'updateOptions', {
+          yaxis: {}
+        }, false, true)
+      } else {
+        // eslint-disable-next-line no-undef
+        ApexCharts.exec('results', 'updateOptions', {
+          yaxis: {
+            labels: {
+              formatter (value, timestamp) {
+                return msToTimeString(value)
+              }
+            }
+          }
+        }, false, true)
+      }
+
       this.setChartData()
     },
     selectSector (val) {
@@ -187,13 +202,12 @@ export default {
       this.setChartData()
     },
     chartLinesStepped (val) {
-      console.log(val ? 'stepline' : 'smooth')
-
-      const op = this.options
-
-      op.stroke.curve = val ? 'stepline' : 'smooth'
-
-      this.options = op
+      // eslint-disable-next-line no-undef
+      ApexCharts.exec('results', 'updateOptions', {
+        stroke: {
+          curve: val ? 'stepline' : 'smooth'
+        }
+      }, false, true)
     }
   },
   methods: {
@@ -201,11 +215,15 @@ export default {
       return this.drivers.filter(d => d.code === driverCode)[0]
     },
     showAllDriver () {
-      this.driversToExclude = []
+      for (const driverCode in this.lapsData) {
+        // eslint-disable-next-line no-undef
+        ApexCharts.exec('results', 'showSeries', driverCode, false, true)
+      }
     },
     hideAllDriver () {
-      for (const driversKey in this.drivers) {
-        this.driversToExclude.push(this.drivers[driversKey].code)
+      for (const driverCode in this.lapsData) {
+        // eslint-disable-next-line no-undef
+        ApexCharts.exec('results', 'hideSeries', driverCode, false, true)
       }
     },
     convertLapData (laps) {
@@ -246,12 +264,23 @@ export default {
       const grouped = this.lapsData
       const series = []
       const newColors = []
+      const newDashArray = []
       let highestLapNumber = 0
+
+      const constructorsIncluded = []
 
       for (const driverCode in grouped) {
         const row = grouped[driverCode]
 
         newColors.push(this.getDriver(driverCode).constructor.color_scheme.primary)
+
+        const driver = this.getDriver(driverCode)
+        if (constructorsIncluded.includes(driver.constructor.constructor_id)) {
+          newDashArray.push(5)
+        } else {
+          newDashArray.push(0)
+          constructorsIncluded.push(driver.constructor.constructor_id)
+        }
 
         const seriesItem = {
           name: driverCode,
@@ -265,24 +294,24 @@ export default {
             highestLapNumber = rowItem.LapNumber
           }
 
-          if (this.selectType === 'Lap Time') {
+          if (this.selectType === 'Lap Time' && rowItem.LapTime !== null) {
             seriesItem.data.push(rowItem.LapTime)
           } else if (this.selectType === 'Sector') {
-            if (this.selectSector === 'Sector 1') {
+            if (this.selectSector === 'Sector 1' && rowItem.Sector1Time !== null) {
               seriesItem.data.push(rowItem.Sector1Time)
-            } else if (this.selectSector === 'Sector 2') {
+            } else if (this.selectSector === 'Sector 2' && rowItem.Sector2Time !== null) {
               seriesItem.data.push(rowItem.Sector2Time)
-            } else if (this.selectSector === 'Sector 3') {
+            } else if (this.selectSector === 'Sector 3' && rowItem.Sector3Time !== null) {
               seriesItem.data.push(rowItem.Sector3Time)
             }
           } else if (this.selectType === 'Speed Trap') {
-            if (this.selectSector === 'Sector 1 Speed Trap') {
+            if (this.selectSector === 'Sector 1 Speed Trap' && rowItem.SpeedI1 !== null) {
               seriesItem.data.push(rowItem.SpeedI1)
-            } else if (this.selectSpeedTrap === 'Sector 2 Speed Trap') {
+            } else if (this.selectSpeedTrap === 'Sector 2 Speed Trap' && rowItem.SpeedI2 !== null) {
               seriesItem.data.push(rowItem.SpeedI2)
-            } else if (this.selectSpeedTrap === 'Finish Line') {
+            } else if (this.selectSpeedTrap === 'Finish Line' && rowItem.SpeedFL !== null) {
               seriesItem.data.push(rowItem.SpeedFL)
-            } else if (this.selectSpeedTrap === 'Longest Straight Speed Trap') {
+            } else if (this.selectSpeedTrap === 'Longest Straight Speed Trap' && rowItem.SpeedST !== null) {
               seriesItem.data.push(rowItem.SpeedST)
             }
           }
@@ -296,6 +325,14 @@ export default {
         colors: newColors
       }, false, true)
 
+      // eslint-disable-next-line no-undef
+      ApexCharts.exec('results', 'updateOptions', {
+        stroke: {
+          // curve: 'smooth',
+          dashArray: newDashArray
+        }
+      }, false, true)
+
       this.series = series
     }
   }
@@ -307,7 +344,11 @@ export default {
   max-width: 100%;
   width: 100%;
   font-family: "Formula1 Bold";
-  //color: white;
+  color: white;
+
+  .chart-container {
+    color: #3a3947;
+  }
 
   .driver-divider-line {
     height: 100%;
