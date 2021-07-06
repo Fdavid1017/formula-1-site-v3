@@ -33,12 +33,21 @@ export default {
     // '@/plugins/bootstrap-vue'
     {
       src: '~/plugins/vue-chart.js',
-      mode: 'client'
+      mode: 'client',
+      ssr: false
     },
     '~/plugins/lodash.js',
     '~/plugins/moment-format.js',
     {
       src: '~/plugins/vue-apexchart.js',
+      ssr: false
+    },
+    // {
+    //   src: '~/plugins/vue-sticky.js',
+    //   ssr: false
+    // }
+    {
+      src: '~/plugins/svg-gauge.js',
       ssr: false
     }
   ],

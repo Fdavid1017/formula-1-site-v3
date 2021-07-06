@@ -121,6 +121,7 @@ export default {
   svg {
     padding: 0;
     margin: 0;
+    top: 0;
   }
 }
 </style>

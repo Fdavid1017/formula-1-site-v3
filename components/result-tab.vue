@@ -2,9 +2,9 @@
   <div class="container fill-width fill-height">
     <v-row class="fill-width">
       <v-col class="text-uppercase align-center">
-        <div class="btn">
+        <nuxt-link :to="`${this.$route.params.id}/live/${sessionType}`" class="btn">
           watch live
-        </div>
+        </nuxt-link>
       </v-col>
       <v-col class="text-uppercase align-center">
         <div class="btn" @click="compareClick('timings')">
@@ -36,7 +36,7 @@
         </v-col>
       </v-row>
 
-      <!--      Tabble content-->
+      <!-- Table content -->
       <v-row v-for="(res, index) in results" :key="index" class="table-data">
         <v-col
           :cols="!isPractice? 2:6"
@@ -73,9 +73,9 @@ export default {
         return {}
       }
     },
-    isPractice: {
-      type: Boolean,
-      default: false
+    sessionType: {
+      type: String,
+      default: 'FP1'
     },
     sessionDate: {
       type: String,
@@ -108,6 +108,9 @@ export default {
       }
 
       return date.toLocaleDateString('en-us', options)
+    },
+    isPractice () {
+      return this.sessionType === 'FP1' || this.sessionType === 'FP2' || this.sessionType === 'FP3'
     }
   },
   methods: {
@@ -132,6 +135,8 @@ export default {
     background-color: $F1-red;
     cursor: pointer;
     font-size: 1.25em;
+    color: white;
+    text-decoration: none;
 
     border-radius: 0px 15px 0px 0px;
     -webkit-border-radius: 0px 15px 0px 0px;

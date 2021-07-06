@@ -24,7 +24,10 @@
     "nuxt-leaflet": "0.0.25",
     "v-owl-carousel": "^1.0.8",
     "vue-apexcharts": "^1.6.1",
-    "vue-chartjs": "^3.5.1"
+    "vue-chartjs": "^3.5.1",
+    "vue-position-sticky": "^0.2.1",
+    "vue-sse": "^2.2.0",
+    "vue-svg-gauge": "^1.2.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

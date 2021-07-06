@@ -49,6 +49,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  font-family: 'Formula1 Bold';
+}
+
 .theme--light.v-application {
   background-color: #EAEAEA !important;
 }

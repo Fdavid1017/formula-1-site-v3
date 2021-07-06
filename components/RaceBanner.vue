@@ -167,6 +167,7 @@
     </g>
   </svg>
 </template>
+
 <script>
 export default {
   name: 'RaceBanner',
@@ -180,3 +181,11 @@ export default {
   }
 }
 </script>
+
+<style>
+/*svg {*/
+/*  position: -webkit-sticky;*/
+/*  position: sticky;*/
+/*  top: 20px;*/
+/*}*/
+</style>

@@ -44,7 +44,7 @@
             <result-tab
               v-if="practice1 && !compare"
               :session-result="practice1"
-              :is-practice="true"
+              session-type="FP1"
               :session-date="weekendSchedule.fp1"
               @compareClick="onCompareClick"
             />
@@ -82,7 +82,7 @@
             <result-tab
               v-if="practice2 && !compare"
               :session-result="practice2"
-              :is-practice="true"
+              session-type="FP2"
               :session-date="weekendSchedule.fp2"
               @compareClick="onCompareClick"
             />
@@ -120,7 +120,7 @@
             <result-tab
               v-if="practice3 && !compare"
               :session-result="practice3"
-              :is-practice="true"
+              session-type="FP3"
               :session-date="weekendSchedule.fp3"
               @compareClick="onCompareClick"
             />
@@ -195,6 +195,7 @@
             <result-tab
               v-if="race && compare===''"
               :session-result="race"
+              session-type="R"
               :session-date="weekendSchedule.race"
               @compareClick="onCompareClick"
             />
