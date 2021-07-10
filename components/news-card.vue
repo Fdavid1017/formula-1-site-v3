@@ -9,7 +9,11 @@
     <img class="card-banner" src="~static/news-card-banner.svg">
     <v-card-text>
       <span v-html="tweet.text" />
+      <p class="muted mt-1">
+        {{ formatDate(new Date(tweet.created_at)) }}
+      </p>
     </v-card-text>
+
     <v-card-actions class="card-footer">
       <v-btn
         text
@@ -60,11 +64,28 @@ export default {
         return {}
       }
     }
+  },
+  methods: {
+    formatDate (dt) {
+      return `${
+        (dt.getMonth() + 1).toString().padStart(2, '0')}/${
+        dt.getDate().toString().padStart(2, '0')}/${
+        dt.getFullYear().toString().padStart(4, '0')} ${
+        dt.getHours().toString().padStart(2, '0')}:${
+        dt.getMinutes().toString().padStart(2, '0')}:${
+        dt.getSeconds().toString().padStart(2, '0')}`
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.muted {
+  font-size: 0.75em;
+  //margin-left: 1em;
+  color: #828282;
+}
+
 .card-banner {
   -webkit-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.15);
