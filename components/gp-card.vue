@@ -12,7 +12,7 @@
         </v-row>
         <v-row class="card-days-container">
           <v-col class="card-days">
-            {{ `${dateTime.getDate() - 2}-${dateTime.getDate()}` }}
+            {{ `${getFormatedDate(dateTime, 2).getDate()}-${dateTime.getDate()}` }}
           </v-col>
         </v-row>
       </v-col>
@@ -117,6 +117,11 @@ export default {
         console.error(`No nation found with ${n}`)
         return ''
       }
+    },
+    getFormatedDate (date, minus) {
+      const d = new Date(date)
+      d.setDate(d.getDate() - minus)
+      return d
     },
     mouseEnter () {
       this.isMouseOver = true
