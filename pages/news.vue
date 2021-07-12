@@ -5,7 +5,7 @@
         v-for="newsItem in news"
         :key="newsItem.id"
       >
-        <news-card data-aos="fade-up" :tweet="newsItem" />
+        <news-card data-aos="fade-up" :tweet="newsItem" @show-overlay="showOverlay" />
       </v-flex>
     </v-layout>
     <v-row class="fill-width mt-10">
@@ -15,6 +15,21 @@
         </v-btn>
       </v-col>
     </v-row>
+    <v-overlay :value="imageOverlay">
+      <v-card
+        class="mx-auto"
+        max-width="75%"
+        max-height="75%"
+      >
+        <v-icon class="close-icon" @click="imageOverlay=false">
+          mdi-close
+        </v-icon>
+        <v-img
+          width="100%"
+          :src="imageOverlayUrl"
+        />
+      </v-card>
+    </v-overlay>
   </v-container>
 </template>
 
@@ -23,18 +38,22 @@ export default {
   name: 'News',
   data () {
     return {
-      news: []
+      news: [],
+      next_token: null,
+      imageOverlay: false,
+      imageOverlayUrl: ''
     }
   },
   async fetch () {
     const news = await fetch('http://localhost:5000/api/tweets?max_results=15').then(res => res.json())
 
-    for (let i = 0; i < news.length; i++) {
-      this.formatTweet(news[i])
-    }
-
     if (!news.error) {
-      this.news = news
+      for (let i = 0; i < news.data.length; i++) {
+        this.formatTweet(news.data[i])
+
+        this.news = news.data
+        this.next_token = news.next_token
+      }
     }
   },
   methods: {
@@ -47,23 +66,59 @@ export default {
       return string.substring(0, start) + what + string.substring(end)
     },
     formatTweet (tweet) {
-      tweet.text = tweet.text.replace(/(?:\r\n|\r|\n)/g, '<br />')
-        .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>')
-        .replace(/#(\S*)/g, '<a href="https://twitter.com/#!/search/$1" target="_blank">#$1</a>')
-
-      let offset = 0
-      for (let i = 0; i < tweet.entities?.mentions?.length; i++) {
-        const ment = tweet.entities.mentions[i]
-        tweet.text = this.replaceBetweenString(tweet.text, ment.start + offset, ment.end + offset, `<a href="https://twitter.com/${ment.username}" target="_blank"> @${ment.username} </a>`)
-        offset += `<a href="https://twitter.com/${ment.username}" target="_blank"> @${ment.username} </a>`.length - `@${ment.username}`.length
+      for (let i = 0; i < tweet.entities?.urls?.length; i++) {
+        const url = tweet.entities.urls[i]
+        if (url.display_url?.startsWith('pic.twitter.com') || url.unwound_url) {
+          tweet.text = tweet.text.replace(url.url, '')
+        }
       }
+
+      tweet.text = this.setUrl(tweet.text)
+      tweet.text = this.setMentions(tweet.text)
+      tweet.text = this.setHash(tweet.text)
+
+      return tweet
+    },
+    // Setup format method for Tweet Mentions
+    setMentions (string) {
+      const re = /@[A-Z0-9_]+/gi
+      return string.replace(re, function (match) {
+        return '<a style="text-decoration: none" href="https://twitter.com/' + match + '" target="_blank">' + match + '</a>'
+      })
+    },
+    // Setup format method for Tweet Hashtags
+    setHash (string) {
+      const re = /#[A-Z0-9_]+/gi
+      return string.replace(re, function (match) {
+        return '<a style="text-decoration: none" href="https://twitter.com/search?q=' + encodeURIComponent(match) + '" target="_blank">' + match + '</a>'
+      })
+    },
+    // Setup format method for Tweet links
+    setUrl (string) {
+      // eslint-disable-next-line
+      const re = /(((f|ht){1}(tp|tps):\/\/)[-a-zA-Z0-9@:%_\+\.~#?&\/\/=]+)/gi
+      return string.replace(re, function (match) {
+        return '<a href="' + match + '" target="_blank" class="link">' + match + '</a>'
+      })
     },
     getMoreTweet () {
-      this.$axios.$get('/api/next_tweets?max_results=15').then((response) => {
-        for (let i = 0; i < response.length; i++) {
-          this.news.push(response[i])
+      let url = '/api/tweets?max_results=15'
+
+      if (this.next_token !== null) {
+        url += `&pagination_token=${this.next_token}`
+      }
+
+      this.$axios.$get(url).then((response) => {
+        for (let i = 0; i < response.data.length; i++) {
+          const formatedTweet = this.formatTweet(response.data[i])
+          this.news.push(formatedTweet)
         }
+        this.next_token = response.next_token
       })
+    },
+    showOverlay (imageUrl) {
+      this.imageOverlayUrl = imageUrl
+      this.imageOverlay = true
     }
   }
 }
@@ -82,6 +137,11 @@ export default {
     background-color: darken($F1-red, 5) !important;
     color: darken(white, 10);
   }
+}
+
+.close-icon {
+  float: right;
+  cursor: pointer;
 }
 
 .media:hover {

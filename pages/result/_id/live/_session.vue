@@ -45,107 +45,109 @@
             </v-col>
             <div class="divider" />
             <v-col>
-              <v-row>
-                <v-col class="d-flex justify-start">
-                  <div>
-                    <div
-                      class="telemetry-driver"
-                      :style="`border-left: 0.4em solid ${activeDriver.constructor.color_scheme.primary}`"
-                    >
-                      <p class="driver-name">
-                        {{ activeDriver.family_name }}
-                      </p>
-                      <p class="team-name">
-                        {{ activeDriver.constructor.name }}
-                      </p>
-                    </div>
-                  </div>
-                </v-col>
-                <v-col class="d-flex justify-end">
-                  <div class="top-infos">
-                    <p class="lap-time">
-                      {{ getLapTime }}
-                    </p>
-                    <img class="tire" src="~static/tires/soft.svg">
-                  </div>
-                </v-col>
-              </v-row>
-              <v-row class="">
-                <v-col class="d-flex justify-center chart-container">
-                  <vue-svg-gauge
-                    :start-angle="-140"
-                    :end-angle="140"
-                    :value="getSpeed"
-                    :separator-step="60"
-                    :separator-thickness="0.5"
-                    :min="0"
-                    :max="360"
-                    gauge-color="#0159CD"
-                    base-color="#1E1D2A"
-                    :scale-interval="0"
-                    :inner-radius="75"
-                  >
-                    <div class="inner-gauge">
-                      <vue-svg-gauge
-                        :start-angle="-140"
-                        :end-angle="45"
-                        :value="getThrotle"
-                        :separator-step="60"
-                        :separator-thickness="0.5"
-                        :min="0"
-                        :max="100"
-                        gauge-color="#11AF02"
-                        base-color="#1E1D2A"
-                        :scale-interval="0"
-                        :inner-radius="75"
+              <template v-if="activeDriver">
+                <v-row>
+                  <v-col class="d-flex justify-start">
+                    <div>
+                      <div
+                        class="telemetry-driver"
+                        :style="`border-left: 0.4em solid ${activeDriver.constructor.color_scheme.primary}`"
                       >
-                        <div class="second-inner-gauge">
-                          <vue-svg-gauge
-                            :start-angle="50"
-                            :end-angle="140"
-                            :value="getBreak"
-                            :separator-step="60"
-                            :separator-thickness="0.5"
-                            :min="0"
-                            :max="100"
-                            gauge-color="#E10600"
-                            base-color="#1E1D2A"
-                            :scale-interval="0"
-                            :inner-radius="75"
-                          >
-                            <div class="inner-values">
-                              <div class="speed">
-                                <div class="value">
-                                  {{ getSpeed }}
-                                </div>
-                                <div class="unit text-uppercase">
-                                  km/h
-                                </div>
-                              </div>
-                              <div class="rpm">
-                                <div class="value">
-                                  {{ getRpm }}
-                                </div>
-                                <div class="unit text-uppercase">
-                                  rpm
-                                </div>
-                              </div>
-                            </div>
-                          </vue-svg-gauge>
-                        </div>
-                      </vue-svg-gauge>
+                        <p class="driver-name">
+                          {{ activeDriver.family_name }}
+                        </p>
+                        <p class="team-name">
+                          {{ activeDriver.constructor.name }}
+                        </p>
+                      </div>
                     </div>
-                  </vue-svg-gauge>
+                  </v-col>
+                  <v-col class="d-flex justify-end">
+                    <div class="top-infos">
+                      <p class="lap-time">
+                        {{ getLapTime }}
+                      </p>
+                      <img class="tire" src="~static/tires/soft.svg">
+                    </div>
+                  </v-col>
+                </v-row>
+                <v-row class="">
+                  <v-col class="d-flex justify-center chart-container">
+                    <vue-svg-gauge
+                      :start-angle="-140"
+                      :end-angle="140"
+                      :value="getSpeed"
+                      :separator-step="60"
+                      :separator-thickness="0.5"
+                      :min="0"
+                      :max="360"
+                      gauge-color="#0159CD"
+                      base-color="#1E1D2A"
+                      :scale-interval="0"
+                      :inner-radius="75"
+                    >
+                      <div class="inner-gauge">
+                        <vue-svg-gauge
+                          :start-angle="-140"
+                          :end-angle="45"
+                          :value="getThrotle"
+                          :separator-step="60"
+                          :separator-thickness="0.5"
+                          :min="0"
+                          :max="100"
+                          gauge-color="#11AF02"
+                          base-color="#1E1D2A"
+                          :scale-interval="0"
+                          :inner-radius="75"
+                        >
+                          <div class="second-inner-gauge">
+                            <vue-svg-gauge
+                              :start-angle="50"
+                              :end-angle="140"
+                              :value="getBreak"
+                              :separator-step="60"
+                              :separator-thickness="0.5"
+                              :min="0"
+                              :max="100"
+                              gauge-color="#E10600"
+                              base-color="#1E1D2A"
+                              :scale-interval="0"
+                              :inner-radius="75"
+                            >
+                              <div class="inner-values">
+                                <div class="speed">
+                                  <div class="value">
+                                    {{ getSpeed }}
+                                  </div>
+                                  <div class="unit text-uppercase">
+                                    km/h
+                                  </div>
+                                </div>
+                                <div class="rpm">
+                                  <div class="value">
+                                    {{ getRpm }}
+                                  </div>
+                                  <div class="unit text-uppercase">
+                                    rpm
+                                  </div>
+                                </div>
+                              </div>
+                            </vue-svg-gauge>
+                          </div>
+                        </vue-svg-gauge>
+                      </div>
+                    </vue-svg-gauge>
 
-                  <div class="drs text-uppercase" :style="'background-color:'+(hasDrs?'#ffe600':'#1E1D2A')">
-                    DRS
-                  </div>
+                    <div class="drs text-uppercase" :style="'background-color:'+(hasDrs?'#ffe600':'#1E1D2A')">
+                      DRS
+                    </div>
 
-                  <div class="gear text-uppercase">
-                    gear {{ currentGear }}
-                  </div>
-                </v-col>
-              </v-row>
+                    <div class="gear text-uppercase">
+                      gear {{ currentGear }}
+                    </div>
+                  </v-col>
+                </v-row>
+              </template>
             </v-col>
           </v-row>
         </v-col>
@@ -198,22 +200,7 @@ export default {
         code: '',
         lapIndex: 0
       },
-      activeDriver: {
-        code: 'VER',
-        constructor: {
-          color_scheme: {
-            primary: '#12142d',
-            secondary: '#CEB735',
-            tertiary: '#ff0126'
-          },
-          constructor_id: 'red_bull',
-          name: 'Red Bull'
-        },
-        driver_id: 'max_verstappen',
-        family_name: 'Verstappen',
-        given_name: 'Max',
-        number: '33'
-      },
+      activeDriver: null,
       driverIndexTable: {}
     }
   },
@@ -228,26 +215,44 @@ export default {
       this.drivers = drivers
     }
     const pageSize = this.pageStartValue + this.pageSize
+    // console.log(`http://localhost:5000/api/allCarPosition/${this.round}/${this.session}?from=${this.pageStartValue}&till=${pageSize}`)
     const carPosition = await fetch(`http://localhost:5000/api/allCarPosition/${this.round}/${this.session}?from=${this.pageStartValue}&till=${pageSize}`).then(res => res.json())
 
-    if (!carPosition.error) {
-      this.carData = carPosition.carsData
+    // console.log(carPosition)
 
+    if (!carPosition.error) {
+      this.carPosition = carPosition
+      // console.log(Object.keys(this.carPosition).length)
       let longestDataStream = 0
-      for (const carDataKey in this.carData) {
-        this.carData[carDataKey].splice(0, 1)
-        for (let i = 0; i < this.carData[carDataKey].length; i++) {
-          if (this.carData[carDataKey][i].SessionTime.length > longestDataStream) {
-            longestDataStream = this.carData[carDataKey][i].SessionTime.length
-            this.longestCarPositionStream = {
-              code: carDataKey,
-              lapIndex: i
+      for (let i = 0; i < this.drivers.length; i++) {
+        // console.log(this.drivers[i])
+        const code = this.drivers[i].driver.code
+        console.log(`DriversKey: ${code}`)
+        // console.log(this.carPosition[code])
+        if (this.carPosition[code] !== undefined) {
+          for (let i = 0; i < this.carPosition[code].length; i++) {
+            console.log(`${this.carPosition[code].SessionTime.length} > ${longestDataStream} = ${this.carPosition[code].SessionTime.length > longestDataStream}`)
+            if (this.carPosition[code].SessionTime.length > longestDataStream) {
+              longestDataStream = this.carPosition[code].SessionTime.length
+              this.longestCarPositionStream = {
+                code,
+                lapIndex: i
+              }
             }
           }
         }
+        // for (const carPositionKey in this.carPosition) {
+        //   for (let i = 0; i < this.carPosition[carPositionKey].length; i++) {
+        //     if (this.carPosition[carPositionKey][i].SessionTime.length > longestDataStream) {
+        //       longestDataStream = this.carPosition[carPositionKey][i].SessionTime.length
+        //       this.longestCarPositionStream = {
+        //         code: carPositionKey,
+        //         lapIndex: i
+        //       }
+        //     }
+        //   }
       }
-      //
-      //   console.log(`Longest car data: ${this.longestCarPositionStream.code} in lap ${this.longestCarPositionStream.lapIndex}`)
+      console.log(`Longest car data: ${this.longestCarPositionStream.code} in lap ${this.longestCarPositionStream.lapIndex}`)
       // const s = '0 days 00:47:53.078000'.split(' ')[2]
       // console.log(s)
       // const d1 = moment.duration('00:47:54.008000')
@@ -281,6 +286,7 @@ export default {
   methods: {
     onDriverSelect (driver) {
       this.activeDriver = driver
+      this.loadCarData(driver.code)
     },
     valueToPercent (value, max = 360) {
       return (value * 100) / max
@@ -320,6 +326,13 @@ export default {
     },
     sleep (ms) {
       return new Promise(resolve => setTimeout(resolve, ms))
+    },
+    loadCarData (driverCode) {
+      console.log(`api/carData/${this.round}/${this.session}/${driverCode}`)
+      this.$axios.$get(`api/carData/${this.round}/${this.session}/${driverCode}`).then((response) => {
+        console.log(response.carData)
+        this.carData = response.carData
+      })
     }
   }
 }
